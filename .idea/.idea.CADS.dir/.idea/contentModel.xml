@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Rasmus\.Rider2019.1\config\consoles\db" t="IncludeRecursive" />
-    <e p="C:\Users\Rasmus\.Rider2019.1\config\extensions" t="IncludeRecursive" />
-    <e p="C:\Users\Rasmus\.Rider2019.1\config\scratches" t="IncludeRecursive" />
-    <e p="C:\Users\Rasmus\.Rider2019.1\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Rasmus\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_.19.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Rasmus\Documents\CADS" t="IncludeFlat">
+    <e p="C:\Users\Rasmus Davidsen\.Rider2019.1\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Rasmus Davidsen\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_.19.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Rasmus Davidsen\Documents\projects\CADS" t="IncludeFlat">
       <e p="Server\node_modules\@babel\parser" t="IncludeRecursive" />
       <e p="Server\node_modules\@babel\types" t="IncludeRecursive" />
       <e p="Server\node_modules\@nestjs\common" t="IncludeRecursive" />
       <e p="Server\node_modules\@nestjs\core" t="IncludeRecursive" />
+      <e p="Server\node_modules\@nestjs\jwt" t="IncludeRecursive" />
       <e p="Server\node_modules\@nestjs\microservices" t="IncludeRecursive" />
       <e p="Server\node_modules\@nestjs\mongoose" t="IncludeRecursive" />
+      <e p="Server\node_modules\@nestjs\passport" t="IncludeRecursive" />
       <e p="Server\node_modules\@nestjs\platform-express" t="IncludeRecursive" />
       <e p="Server\node_modules\@nestjs\testing" t="IncludeRecursive" />
       <e p="Server\node_modules\@nestjs\websockets" t="IncludeRecursive" />
@@ -20,22 +19,35 @@
         <e p="babel__generator" t="IncludeRecursive" />
         <e p="babel__template" t="IncludeRecursive" />
         <e p="babel__traverse" t="IncludeRecursive" />
+        <e p="bcrypt" t="IncludeRecursive" />
         <e p="body-parser" t="IncludeRecursive" />
+        <e p="bson" t="IncludeRecursive" />
         <e p="connect" t="IncludeRecursive" />
         <e p="cookiejar" t="IncludeRecursive" />
         <e p="express" t="IncludeRecursive" />
         <e p="express-serve-static-core" t="IncludeRecursive" />
         <e p="jest" t="IncludeRecursive" />
         <e p="jest-diff" t="IncludeRecursive" />
+        <e p="jsonwebtoken" t="IncludeRecursive" />
         <e p="mime" t="IncludeRecursive" />
+        <e p="mongodb" t="IncludeRecursive" />
+        <e p="mongoose" t="IncludeRecursive" />
         <e p="node" t="IncludeRecursive" />
+        <e p="passport" t="IncludeRecursive" />
+        <e p="passport-jwt" t="IncludeRecursive" />
+        <e p="passport-local" t="IncludeRecursive" />
+        <e p="passport-strategy" t="IncludeRecursive" />
         <e p="range-parser" t="IncludeRecursive" />
         <e p="serve-static" t="IncludeRecursive" />
         <e p="superagent" t="IncludeRecursive" />
         <e p="supertest" t="IncludeRecursive" />
       </e>
+      <e p="Server\node_modules\bcrypt" t="IncludeRecursive" />
       <e p="Server\node_modules\jest" t="IncludeRecursive" />
       <e p="Server\node_modules\mongoose" t="IncludeRecursive" />
+      <e p="Server\node_modules\passport" t="IncludeRecursive" />
+      <e p="Server\node_modules\passport-jwt" t="IncludeRecursive" />
+      <e p="Server\node_modules\passport-local" t="IncludeRecursive" />
       <e p="Server\node_modules\reflect-metadata" t="IncludeRecursive" />
       <e p="Server\node_modules\rimraf" t="IncludeRecursive" />
       <e p="Server\node_modules\rxjs" t="IncludeRecursive" />
