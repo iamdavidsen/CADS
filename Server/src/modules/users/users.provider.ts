@@ -19,7 +19,22 @@ export class UsersProvider {
         return this.userModel.findOne({ email })
     }
     
+    async find(query): Promise<User[]> {
+        return await this.userModel.find(query).exec();
+    }
+    
     async findAll(): Promise<User[]> {
         return await this.userModel.find().exec();
+    }
+    
+    async edit(id: string, user: User): Promise<User | undefined> {
+        return this.userModel.findByIdAndUpdate(id, <User>{
+            username: user.username,
+            email: user.email
+        })
+    }
+    
+    async delete(id: string) {
+        await this.userModel.findByIdAndDelete(id)
     }
 }
