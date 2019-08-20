@@ -6,6 +6,91 @@
     <e p="C:\Users\Rasmus\.Rider2019.1\config\scratches" t="IncludeRecursive" />
     <e p="C:\Users\Rasmus\.Rider2019.1\system\extResources" t="IncludeRecursive" />
     <e p="C:\Users\Rasmus\.Rider2019.1\system\resharper-host\local\Transient\ReSharperHost\v191\SolutionCaches\_.19.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Rasmus\Documents\CADS" t="IncludeFlat" />
+    <e p="C:\Users\Rasmus\Documents\CADS" t="IncludeFlat">
+      <e p="Server\node_modules\@babel\parser" t="IncludeRecursive" />
+      <e p="Server\node_modules\@babel\types" t="IncludeRecursive" />
+      <e p="Server\node_modules\@nestjs\common" t="IncludeRecursive" />
+      <e p="Server\node_modules\@nestjs\core" t="IncludeRecursive" />
+      <e p="Server\node_modules\@nestjs\microservices" t="IncludeRecursive" />
+      <e p="Server\node_modules\@nestjs\mongoose" t="IncludeRecursive" />
+      <e p="Server\node_modules\@nestjs\platform-express" t="IncludeRecursive" />
+      <e p="Server\node_modules\@nestjs\testing" t="IncludeRecursive" />
+      <e p="Server\node_modules\@nestjs\websockets" t="IncludeRecursive" />
+      <e p="Server\node_modules\@types" t="IncludeRecursive">
+        <e p="babel__generator" t="IncludeRecursive" />
+        <e p="babel__template" t="IncludeRecursive" />
+        <e p="babel__traverse" t="IncludeRecursive" />
+        <e p="body-parser" t="IncludeRecursive" />
+        <e p="connect" t="IncludeRecursive" />
+        <e p="cookiejar" t="IncludeRecursive" />
+        <e p="express" t="IncludeRecursive" />
+        <e p="express-serve-static-core" t="IncludeRecursive" />
+        <e p="jest" t="IncludeRecursive" />
+        <e p="jest-diff" t="IncludeRecursive" />
+        <e p="mime" t="IncludeRecursive" />
+        <e p="node" t="IncludeRecursive" />
+        <e p="range-parser" t="IncludeRecursive" />
+        <e p="serve-static" t="IncludeRecursive" />
+        <e p="superagent" t="IncludeRecursive" />
+        <e p="supertest" t="IncludeRecursive" />
+      </e>
+      <e p="Server\node_modules\jest" t="IncludeRecursive" />
+      <e p="Server\node_modules\mongoose" t="IncludeRecursive" />
+      <e p="Server\node_modules\reflect-metadata" t="IncludeRecursive" />
+      <e p="Server\node_modules\rimraf" t="IncludeRecursive" />
+      <e p="Server\node_modules\rxjs" t="IncludeRecursive" />
+      <e p="Server\node_modules\supertest" t="IncludeRecursive" />
+      <e p="Server\node_modules\ts-jest" t="IncludeRecursive" />
+      <e p="Server\node_modules\ts-node" t="IncludeRecursive" />
+      <e p="Server\node_modules\tsc-watch" t="IncludeRecursive" />
+      <e p="Server\node_modules\tsconfig-paths" t="IncludeRecursive" />
+      <e p="Server\node_modules\tslint" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.dom.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.dom.iterable.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2015.collection.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2015.core.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2015.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2015.generator.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2015.iterable.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2015.promise.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2015.proxy.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2015.reflect.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2015.symbol.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2015.symbol.wellknown.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2016.array.include.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2016.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2016.full.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2017.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2017.full.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2017.intl.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2017.object.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2017.sharedmemory.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2017.string.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2017.typedarrays.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2018.asynciterable.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2018.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2018.full.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2018.intl.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2018.promise.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2018.regexp.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2019.array.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2019.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2019.full.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2019.string.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es2019.symbol.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es5.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.es6.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.esnext.array.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.esnext.asynciterable.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.esnext.bigint.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.esnext.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.esnext.full.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.esnext.intl.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.esnext.symbol.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.scripthost.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.webworker.d.ts" t="IncludeRecursive" />
+      <e p="Server\node_modules\typescript\lib\lib.webworker.importscripts.d.ts" t="IncludeRecursive" />
+    </e>
   </component>
 </project>
