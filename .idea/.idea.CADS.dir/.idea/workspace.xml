@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545d72a8-d72b-465a-a8d5-8f723058666a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Server/src/modules/projects/dto/createProject.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/modules/projects/dto/editProject.dto.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/modules/projects/interfaces/project.interface.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/modules/projects/projects.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Server/src/modules/projects/utils/isMember.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/modules/documents/documents.provider.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/modules/documents/dto/addDocument.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/modules/documents/dto/editDocument.dto.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/modules/documents/interfaces/document.interface.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Server/src/modules/documents/schemas/document.schema.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/modules/users/users.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/modules/users/users.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Server/src/modules/users/users.provider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Server/src/modules/users/users.provider.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,11 +17,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Server/src/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+            <state relative-caret-position="275">
+              <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
               <folding>
                 <element signature="e#0#38#0" expanded="true" />
               </folding>
@@ -32,20 +29,37 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/projects.controller.ts">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/schemas/document.schema.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="473">
-              <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
+            <state relative-caret-position="150">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
-                <element signature="e#0#101#0" expanded="true" />
+                <element signature="e#0#37#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/dto/removeFromProject.dto.ts">
+        <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/interfaces/document.interface.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="4" selection-start-column="4" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#37#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/dto/addDocument.dto.ts">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/dto/editDocument.dto.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="25">
               <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
@@ -54,42 +68,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/dto/editProject.dto.ts">
+        <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/documents.provider.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/projects.service.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1050">
-              <caret line="3" column="52" selection-start-line="3" selection-start-column="52" selection-end-line="3" selection-end-column="52" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/utils/isMember.ts">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/utils/isAdmin.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="3" column="70" selection-start-line="3" selection-start-column="70" selection-end-line="3" selection-end-column="70" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/projects.provider.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="51" column="63" selection-start-line="51" selection-start-column="63" selection-end-line="51" selection-end-column="63" />
+            <state relative-caret-position="239">
+              <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -98,13 +80,48 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/dto/addToProject.dto.ts">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/documents.module.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/dto/createProject.dto.ts">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/documents.controller.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="875">
+              <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#101#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/documents.service.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-275">
+              <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+              <folding>
+                <element signature="e#0#63#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/schemas/project.schema.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -143,14 +160,12 @@
         <option value="$PROJECT_DIR$/Server/src/modules/auth/auth.module.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/auth/auth.service.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/users/users.provider.ts" />
-        <option value="$PROJECT_DIR$/Server/src/modules/projects/schemas/project.schema.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/interfaces/project.interface.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/dto/createProject.dto.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/dto/editProject.dto.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/users/users.controller.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/utils/isMember.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/projects.module.ts" />
-        <option value="$PROJECT_DIR$/Server/src/app.module.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/dto/addToProject.dto.ts.cs" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/projects.provider.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/utils/isAdmin.ts" />
@@ -158,6 +173,17 @@
         <option value="$PROJECT_DIR$/Server/src/modules/projects/dto/addToProject.dto.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/dto/removeFromProject.dto.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/projects.controller.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/projects/schemas/project.schema.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/documents/schemas/project.schema.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/documents/interfaces/project.interface.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/documents/dto/addDocument.dto.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/documents/dto/editDocument.dto.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/documents/projects.provider.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/documents/documents.provider.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/documents/documents.service.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/documents/documents.controller.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/documents/documents.module.ts" />
+        <option value="$PROJECT_DIR$/Server/src/app.module.ts" />
       </list>
     </option>
   </component>
@@ -212,7 +238,7 @@
               <item name="Server" type="34e6ba20:FileSystemExplorerNode" />
               <item name="src" type="34e6ba20:FileSystemExplorerNode" />
               <item name="modules" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="projects" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="documents" type="34e6ba20:FileSystemExplorerNode" />
             </path>
             <path>
               <item name="" type="161ac34:FileSystemExplorerRootNode" />
@@ -220,7 +246,7 @@
               <item name="Server" type="34e6ba20:FileSystemExplorerNode" />
               <item name="src" type="34e6ba20:FileSystemExplorerNode" />
               <item name="modules" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="projects" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="documents" type="34e6ba20:FileSystemExplorerNode" />
               <item name="dto" type="34e6ba20:FileSystemExplorerNode" />
             </path>
             <path>
@@ -229,8 +255,34 @@
               <item name="Server" type="34e6ba20:FileSystemExplorerNode" />
               <item name="src" type="34e6ba20:FileSystemExplorerNode" />
               <item name="modules" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="documents" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="interfaces" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="CADS" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Server" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="modules" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="documents" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="schemas" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="CADS" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Server" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="modules" type="34e6ba20:FileSystemExplorerNode" />
               <item name="projects" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="utils" type="34e6ba20:FileSystemExplorerNode" />
+            </path>
+            <path>
+              <item name="" type="161ac34:FileSystemExplorerRootNode" />
+              <item name="CADS" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="Server" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="modules" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="projects" type="34e6ba20:FileSystemExplorerNode" />
+              <item name="schemas" type="34e6ba20:FileSystemExplorerNode" />
             </path>
             <path>
               <item name="" type="161ac34:FileSystemExplorerRootNode" />
@@ -282,7 +334,7 @@
       <workItem from="1566296695563" duration="1459000" />
       <workItem from="1566298311099" duration="802000" />
       <workItem from="1566302764203" duration="9346000" />
-      <workItem from="1566312957014" duration="12059000" />
+      <workItem from="1566312957014" duration="15292000" />
     </task>
     <task id="LOCAL-00001" summary="Added Auth">
       <created>1566318970723</created>
@@ -298,11 +350,32 @@
       <option name="project" value="LOCAL" />
       <updated>1566318978894</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added project CRUD">
+      <created>1566325744339</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1566325744339</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added project CRUD">
+      <created>1566325752335</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566325752335</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added project CRUD">
+      <created>1566325756872</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566325756872</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24006000" />
+    <option name="totallyTimeSpent" value="27239000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -328,13 +401,13 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="NuGet" order="7" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32870865" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32870865" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="Statistic" order="11" weight="0.32977587" />
-      <window_info anchor="bottom" id="Unit Tests" order="12" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.30843115" />
+      <window_info anchor="bottom" id="Unit Tests" order="12" weight="0.32977587" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="13" visible="true" weight="0.30843115" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" />
-      <window_info anchor="bottom" id="TypeScript" order="15" />
+      <window_info anchor="bottom" id="TypeScript" order="15" weight="0.32977587" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -375,7 +448,8 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Auth" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Auth" />
+    <MESSAGE value="Added project CRUD" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added project CRUD" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -521,16 +595,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/schemas/project.schema.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/app.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="125">
@@ -575,16 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -637,10 +691,97 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/projects.controller.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
+        <state relative-caret-position="1144">
           <caret line="44" column="21" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="21" />
           <folding>
             <element signature="e#0#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/schemas/project.schema.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="8" selection-start-line="3" selection-start-column="8" selection-end-line="3" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/schemas/document.schema.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/documents.provider.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="239">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/dto/addDocument.dto.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/dto/editDocument.dto.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/interfaces/document.interface.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" selection-start-column="4" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/documents.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-275">
+          <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
+          <folding>
+            <element signature="e#0#63#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/documents.controller.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="35" column="4" selection-start-line="35" selection-start-column="4" selection-end-line="35" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#101#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/modules/documents/documents.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Server/src/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
           </folding>
         </state>
       </provider>

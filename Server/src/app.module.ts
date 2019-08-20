@@ -7,12 +7,14 @@ import {AuthModule} from "./modules/auth/auth.module";
 
 import {DB_CONNECTION_STRING} from "./env";
 import {ProjectsModule} from "./modules/projects/projects.module";
+import {DocumentsModule} from "./modules/documents/documents.module";
 
 @Module({
     imports: [
         MongooseModule.forRoot(DB_CONNECTION_STRING, {useNewUrlParser: true}),
         UsersModule,
         ProjectsModule,
+        DocumentsModule,
         AuthModule
     ],
     providers: [AppService],
