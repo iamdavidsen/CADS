@@ -14,7 +14,7 @@ interface IAuthReducer {
 }
 
 const userString = localStorage.getItem('user');
-const user = JSON.parse(userString ? userString : '');
+const user = userString && JSON.parse(userString);
 
 const initialState: IAuthReducer = {
     loggedIn: Boolean(user),

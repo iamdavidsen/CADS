@@ -8,7 +8,6 @@ import * as OfflinePluginRuntime from 'offline-plugin/runtime';
 
 import {store} from "./store/configureStore";
 
-import Menu from './components/Menu';
 import List from './pages/List';
 import {home, list} from 'ionicons/icons';
 import Routing from './modules/routing/Routing'
@@ -48,7 +47,6 @@ const App: React.FunctionComponent = () => (
         <IonApp>
             <IonReactRouter>
                 <IonSplitPane contentId="main">
-                    <Menu appPages={appPages}/>
                     <IonPage id="main">
                         <Routing />
                     </IonPage>

@@ -1,10 +1,12 @@
-import {IonPage, IonRouterOutlet} from "@ionic/react";
-import {Redirect, Route} from "react-router";
+import {IonRouterOutlet} from "@ionic/react";
 import React from "react";
 import {connect} from "react-redux";
 
-import List from "../../pages/List";
 import HomePage from "../home/Home";
+import {PublicRoute} from "./components/publicRoute";
+import Login from "../login/Login";
+import Register from "../register/Register";
+import {PrivateRoute} from "./components/privateRoute";
 
 interface IProps {
     loggedIn: boolean
@@ -12,9 +14,10 @@ interface IProps {
 
 const Routing = ({ loggedIn }: IProps) => (
     <IonRouterOutlet>
-        <Route path="/:tab(home)" component={HomePage} exact={true}/>
-        <Route path="/:tab(home)/list" component={List} exact={true}/>
-        <Route exact path="/" render={() => <Redirect to="/home"/>}/>
+        <PublicRoute loggedIn={loggedIn} restricted={true} path="/" component={HomePage} exact={true}/>
+        <PublicRoute loggedIn={loggedIn} restricted={true} path="/login" component={Login} exact={true}/>
+        <PublicRoute loggedIn={loggedIn} restricted={true} path="/register" component={Register} exact={true}/>
+        <PrivateRoute loggedIn={loggedIn} path="/projects" component={HomePage} exact={true}/>
     </IonRouterOutlet>
 );
 
