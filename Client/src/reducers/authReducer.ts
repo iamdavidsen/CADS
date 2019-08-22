@@ -8,7 +8,9 @@ import {
 interface IAuthReducer {
     loggingIn: boolean,
     loggedIn: boolean,
-    user: string
+    user?: {
+        access_token: string
+    }
 }
 
 const userString = localStorage.getItem('user');
@@ -17,11 +19,11 @@ const user = JSON.parse(userString ? userString : '');
 const initialState: IAuthReducer = {
     loggedIn: Boolean(user),
     loggingIn: false,
-    user: user ? user : '',
+    user: user && user,
 };
 
-export function authentication(state = initialState, action: any): IAuthReducer {
-    switch (action.type) {
+export const auth = (state = initialState, action: any): IAuthReducer => {
+    switch (action.type as string) {
         case LOGIN_REQUEST:
             return {
                 ...state,
@@ -40,16 +42,16 @@ export function authentication(state = initialState, action: any): IAuthReducer 
                 ...state,
                 loggingIn: false,
                 loggedIn: false,
-                user: ''
+                user: undefined
             };
         case LOGOUT:
             return {
                 ...state,
                 loggingIn: false,
                 loggedIn: false,
-                user: ''
+                user: undefined
             };
         default:
             return state
     }
-}
+};
