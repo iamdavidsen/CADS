@@ -1,9 +1,16 @@
 import React, {ChangeEvent, Component} from 'react';
 import {Box} from "grommet";
 import {Button, Form, FormField, TextInput} from "grommet/es6";
+import {connect} from "react-redux";
+import {Dispatch} from "redux";
+
+import {RegisterDto} from "../../../../Server/src/modules/auth/dto/register.dto";
+import {registerUser} from "../../actions/auth/registerUser";
 
 interface IProps {
-
+    actions: {
+        registerUser: (registerDto: RegisterDto) => void
+    }
 }
 
 interface IState {
@@ -29,6 +36,14 @@ class Register extends Component<IProps, IState> {
 
     onSubmit = (e: ChangeEvent<HTMLFormElement>) => {
         e.preventDefault();
+        
+        const { email, username, password } = this.state;
+        
+        this.props.actions.registerUser({
+            email,
+            username,
+            password
+        })
     };
 
     render() {
@@ -62,4 +77,15 @@ class Register extends Component<IProps, IState> {
     }
 }
 
-export default Register;
+const mapDispatchToProps = (dispatch: Dispatch) => {
+    return {
+        actions: {
+            registerUser: (registerDto: RegisterDto) => dispatch(registerUser(registerDto) as any)
+        }
+    }
+};
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(Register)

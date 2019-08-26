@@ -1,4 +1,7 @@
 import {
+    REGISTER_USER_REQUEST,
+    REGISTER_USER_SUCCESS,
+    REGISTER_USER_FAILURE,
     LOGIN_REQUEST,
     LOGIN_SUCCESS,
     LOGIN_FAILURE,
@@ -6,6 +9,7 @@ import {
 } from '../constants';
 
 interface IAuthReducer {
+    registerStatus: string,
     loggingIn: boolean,
     loggedIn: boolean,
     user?: {
@@ -17,6 +21,7 @@ const userString = localStorage.getItem('user');
 const user = userString && JSON.parse(userString);
 
 const initialState: IAuthReducer = {
+    registerStatus: '',
     loggedIn: Boolean(user),
     loggingIn: false,
     user: user && user,
@@ -24,6 +29,13 @@ const initialState: IAuthReducer = {
 
 export const auth = (state = initialState, action: any): IAuthReducer => {
     switch (action.type as string) {
+        case REGISTER_USER_REQUEST:
+        case REGISTER_USER_SUCCESS:
+        case REGISTER_USER_FAILURE:
+            return {
+                ...state,
+                registerStatus: action.type
+            };
         case LOGIN_REQUEST:
             return {
                 ...state,
