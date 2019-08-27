@@ -1,3 +1,3 @@
 export class AddToProjectDto {
-    emailToAdd: string
+    emailToAdd: string;
 }

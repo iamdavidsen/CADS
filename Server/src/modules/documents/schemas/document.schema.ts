@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose';
-import {Schema} from "mongoose";
+import {Schema} from 'mongoose';
 
-import {PROJECTS_COLLECTION} from "../../../constants";
+import {PROJECTS_COLLECTION} from '../../../constants';
 
 export const DocumentsSchema = new mongoose.Schema({
     documentTitle: String,

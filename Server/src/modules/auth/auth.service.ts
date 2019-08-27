@@ -1,9 +1,9 @@
-import * as bcrypt from 'bcrypt'
+import * as bcrypt from 'bcrypt';
 import {BadRequestException, Injectable} from '@nestjs/common';
-import {UsersProvider} from "../users/users.provider";
-import {RegisterDto} from "./dto/register.dto";
-import {User} from "../users/interfaces/user.interface";
-import {JwtService} from "@nestjs/jwt";
+import {UsersProvider} from '../users/users.provider';
+import {RegisterDto} from './dto/register.dto';
+import {User} from '../users/interfaces/user.interface';
+import {JwtService} from '@nestjs/jwt';
 
 @Injectable()
 export class AuthService {
@@ -26,13 +26,13 @@ export class AuthService {
     async registerUser(registerDto: RegisterDto) {
         const alreadyCreatedUser = await this.usersProvider.findOneWithEmail(registerDto.email);
 
-        if (alreadyCreatedUser) throw new BadRequestException;
+        if (alreadyCreatedUser) { throw new BadRequestException(); }
 
-        return this.usersProvider.create(<User>{
+        return this.usersProvider.create({
             username: registerDto.username,
             email: registerDto.email,
-            hash: await bcrypt.hash(registerDto.password, 12)
-        })
+            hash: await bcrypt.hash(registerDto.password, 12),
+        } as User);
     }
 
     async login(user: any) {
