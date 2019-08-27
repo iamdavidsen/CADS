@@ -2,7 +2,9 @@ import {LOGOUT} from "../../constants";
 
 export const logout = () => {
     localStorage.removeItem('user');
-    location.reload();
+
+    // tslint:disable-next-line
+    window.location.reload();
     
     return {
         type: LOGOUT

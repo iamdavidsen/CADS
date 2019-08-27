@@ -9,7 +9,6 @@ export const handleError = (error: AxiosError, dispatch: Dispatch) => {
     
     if (response.status === 401) {
         dispatch(logout());
-        location.reload(true);
     }
 
     return response.statusText

@@ -14,7 +14,7 @@ import {handleError} from "../handleError";
 import {CreateUserDto} from "../../../../Server/src/modules/users/dto/createUser.dto";
 
 export const registerUser = (createUserDto: CreateUserDto) => {
-    let url = `${BASE_URL}/auth/login`;
+    let url = `${BASE_URL}/auth/register`;
 
     return (dispatch: Dispatch) => {
         dispatch({ type: REGISTER_USER_REQUEST });
