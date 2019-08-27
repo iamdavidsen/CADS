@@ -8,5 +8,5 @@ export const ProjectSchema = new mongoose.Schema({
     description: String,
     imgUrl: String,
     creator: { type : Schema.Types.ObjectId, ref: USERS_COLLECTION },
-    members: [{ type : Schema.Types.ObjectId, ref: USERS_COLLECTION },]
+    members: [{ type : Schema.Types.ObjectId, ref: USERS_COLLECTION }]
 });

@@ -34,7 +34,7 @@ export class ProjectsProvider {
     }
 
     async edit(id: string, project: EditProjectDto): Promise<Project | undefined> {
-        return this.projectModel.findByIdAndUpdate(id, <Project>{
+        return this.projectModel.findByIdAndUpdate(id, {
             projectName: project.projectName,
             description: project.description,
             imgUrl: project.imgUrl
