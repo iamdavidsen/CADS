@@ -6,8 +6,9 @@ import {Dispatch} from "redux";
 
 import {RegisterDto} from "../../../../Server/src/modules/auth/dto/register.dto";
 import {registerUser} from "../../actions/auth/registerUser";
-import {REGISTER_USER_FAILURE, REGISTER_USER_REQUEST, REGISTER_USER_SUCCESS} from "../../constants";
 import {withRouter} from "react-router";
+
+import {REGISTER_USER_FAILURE, REGISTER_USER_REQUEST, REGISTER_USER_SUCCESS} from "../../constants";
 
 interface IProps {
     history: any
