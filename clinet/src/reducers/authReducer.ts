@@ -14,6 +14,8 @@ interface IAuthReducer {
     loggedIn: boolean,
     user?: {
         access_token: string
+        username: string
+        profilePictureUrl: string
     }
 }
 
