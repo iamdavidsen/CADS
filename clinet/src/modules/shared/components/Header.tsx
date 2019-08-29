@@ -14,7 +14,7 @@ const headerStyle: React.CSSProperties = {
 export const Header: React.FC<IProps> = () => {
     return (
         <div style={headerStyle}>
-           <Logo/> 
+           
            <div/>
         </div>
     )
