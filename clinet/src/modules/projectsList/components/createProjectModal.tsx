@@ -1,8 +1,6 @@
 import * as React from 'react'
 
-import {Project} from "../../../../../Server/src/modules/projects/interfaces/project.interface";
 import {Box, Button, Heading, Layer, Text, TextInput} from "grommet";
-import {Link, NavLink} from "react-router-dom";
 
 interface IProps {
     shot: boolean
