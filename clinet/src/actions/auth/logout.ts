@@ -2,7 +2,8 @@ import {LOGOUT} from "../../constants";
 
 export const logout = () => {
     localStorage.removeItem('user');
-    location.reload();
+    
+    window.location.reload();
     
     return {
         type: LOGOUT

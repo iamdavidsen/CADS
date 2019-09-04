@@ -16,6 +16,10 @@ interface IState {
 }
 
 class ProjectList extends React.Component<IProps, IState> {
+    componentWillMount(): void {
+        this.props.actions.getProjects();
+    }
+
     componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>): void {
         console.log(this.props)
     }
