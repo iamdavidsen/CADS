@@ -1,5 +1,5 @@
-import {Project} from "../interfaces/project.interface";
+import {Project} from '../interfaces/project.interface';
 
 export const isAdmin = (userId: string, project?: Project) => {
-    return Boolean(project && (project.creator.toHexString() === userId))
+    return Boolean(project && (project.creator.toHexString() === userId));
 };

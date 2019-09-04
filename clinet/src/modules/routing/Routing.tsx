@@ -8,6 +8,7 @@ import Register from "../register/Register";
 import {PrivateRoute} from "./components/privateRoute";
 import {Switch} from "react-router";
 import ProjectsList from "../projectsList/ProjectsList";
+import Project from "../project/Project";
 
 interface IProps {
     loggedIn: boolean
@@ -18,6 +19,7 @@ const Routing = ({ loggedIn }: IProps) => (
         <PublicRoute loggedIn={loggedIn} restricted={true} path="/" component={HomePage} exact={true}/>
         <PublicRoute loggedIn={loggedIn} restricted={true} path="/login" component={Login} exact={true}/>
         <PublicRoute loggedIn={loggedIn} restricted={true} path="/register" component={Register} exact={true}/>
+        <PublicRoute loggedIn={loggedIn} path="/project/:id" component={Project} exact={true}/>
         <PrivateRoute loggedIn={loggedIn} path="/projects" component={ProjectsList} exact={true}/>
     </Switch>
 );

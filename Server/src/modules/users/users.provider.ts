@@ -3,8 +3,8 @@ import { Model } from 'mongoose';
 import { CreateUserDto } from './dto/createUser.dto';
 import { User } from './interfaces/user.interface';
 
-import {InjectModel} from "@nestjs/mongoose";
-import {USERS_COLLECTION} from "../../constants";
+import {InjectModel} from '@nestjs/mongoose';
+import {USERS_COLLECTION} from '../../constants';
 
 @Injectable()
 export class UsersProvider {
@@ -14,27 +14,27 @@ export class UsersProvider {
         const createdUser = new this.userModel(createUserDto);
         return await createdUser.save();
     }
-    
+
     async findOneWithEmail(email: string): Promise<User | undefined> {
-        return this.userModel.findOne({ email })
+        return this.userModel.findOne({ email });
     }
-    
+
     async find(query): Promise<User[]> {
         return await this.userModel.find(query).exec();
     }
-    
+
     async findAll(): Promise<User[]> {
         return await this.userModel.find().exec();
     }
-    
+
     async edit(id: string, user: User): Promise<User | undefined> {
-        return this.userModel.findByIdAndUpdate(id, <User>{
+        return this.userModel.findByIdAndUpdate(id, {
             username: user.username,
-            email: user.email
-        })
+            email: user.email,
+        } as User);
     }
-    
+
     async delete(id: string) {
-        await this.userModel.findByIdAndDelete(id)
+        await this.userModel.findByIdAndDelete(id);
     }
 }

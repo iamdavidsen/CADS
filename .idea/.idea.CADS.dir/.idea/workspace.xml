@@ -2,12 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545d72a8-d72b-465a-a8d5-8f723058666a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/clinet/src/modules/projectsList/components/projectItem.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinet/src/modules/shared/components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinet/src/modules/shared/components/Logo.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinet/src/modules/shared/components/Spacer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinet/src/modules/shared/containers/LoggedInUser.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/actions/auth/logout.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/actions/auth/logout.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/actions/handleError.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/actions/handleError.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/modules/login/Login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/login/Login.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/reducers/documentReducer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinet/src/modules/register/Register.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/register/Register.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinet/src/modules/routing/Routing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/routing/Routing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinet/src/project/Project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/project/Project.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinet/src/reducers/authReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/reducers/authReducer.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,135 +20,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinet/src/reducers/index.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="e#0#40#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinet/src/modules/login/Login.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#52#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-              <folding>
-                <element signature="e#0#30#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Server/src/main.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinet/src/actions/project/getProjects.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/projects.controller.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-              <folding>
-                <element signature="e#0#101#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinet/src/actions/getHeaders.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinet/src/modules/home/Home.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1100">
-              <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinet/src/App.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clinet/src/modules/routing/Routing.tsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="20" column="81" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
   <component name="FindInProjectRecents">
     <findStrings>
       <find>ProjectsModule</find>
       <find>offlin</find>
       <find>define</find>
       <find>sag</find>
-      <find>PROJECT</find>
     </findStrings>
-    <replaceStrings>
-      <replace>DOCUMENT</replace>
-    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -154,8 +37,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Server/src/modules/documents/dto/addDocument.dto.ts" />
-        <option value="$PROJECT_DIR$/Server/src/modules/documents/dto/editDocument.dto.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/documents/projects.provider.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/documents/documents.provider.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/documents/documents.service.ts" />
@@ -184,29 +65,37 @@
         <option value="$PROJECT_DIR$/Client/config/env.js" />
         <option value="$PROJECT_DIR$/Client/src/reducers/authReducer.ts" />
         <option value="$PROJECT_DIR$/Client/src/modules/register/Register.tsx" />
-        <option value="$PROJECT_DIR$/clinet/src/env.ts" />
         <option value="$PROJECT_DIR$/clinet/src/App.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/App.css" />
-        <option value="$PROJECT_DIR$/clinet/src/project/Project.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/modules/css/Home.scss" />
         <option value="$PROJECT_DIR$/clinet/src/modules/home/Home.tsx" />
-        <option value="$PROJECT_DIR$/clinet/src/modules/register/Register.tsx" />
-        <option value="$PROJECT_DIR$/clinet/src/actions/auth/registerUser.ts" />
         <option value="$PROJECT_DIR$/clinet/src/constants.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/reducers/authReducer.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/actions/getHeaders.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/reducers/projectsReducer.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/reducers/index.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/actions/project/getProjects.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/modules/routing/Routing.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/actions/handleError.ts" />
         <option value="$PROJECT_DIR$/clinet/src/actions/auth/logout.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/reducers/documentReducer.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/modules/login/Login.tsx" />
-        <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/actions/auth/registerUser.ts" />
+        <option value="$PROJECT_DIR$/clinet/src/env.ts" />
         <option value="$PROJECT_DIR$/Server/src/main.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/auth/auth.service.ts" />
+        <option value="$PROJECT_DIR$/clinet/src/project/Project.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/login/Login.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/register/Register.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/routing/Routing.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/components/projectItem.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/shared/containers/loggedInUser.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/reducers/authReducer.ts" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/shared/containers/LoggedInUser.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/shared/components/Logo.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/shared/components/Header.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/shared/components/Spacer.tsx" />
       </list>
     </option>
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
   </component>
   <component name="ProjectConfigurationFiles">
     <option name="files">
@@ -221,50 +110,21 @@
     <option name="width" value="1846" />
     <option name="height" value="1664" />
   </component>
+  <component name="ProjectId" id="1Q2pAUu5UZIzQMjni8JliTle8X3" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectView">
-    <navigator currentView="FileSystemExplorer" proportions="" version="1">
-      <autoscrollToSource FileSystemExplorer="false" />
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="CADS" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="CADS" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Server" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-            <path>
-              <item name="" type="161ac34:FileSystemExplorerRootNode" />
-              <item name="CADS" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="Server" type="34e6ba20:FileSystemExplorerNode" />
-              <item name="src" type="34e6ba20:FileSystemExplorerNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
-  </component>
   <component name="PropertiesComponent">
     <property name="Rider.DefaultBreakpoints.AreToggled" value="true" />
     <property name="Rider.ProjectViewActivator.IsNotFirstRun" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="js.linters.configure.manually.selectedtslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="settings.javascript.linters.tslint" />
-    <property name="ts.external.directory.path" value="C:\Users\Rasmus Davidsen\Documents\projects\CADS\clinet\node_modules\typescript\lib" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="ts.external.directory.path" value="C:\Users\Rasmus\Documents\CADS\Server\node_modules\typescript\lib" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -297,9 +157,8 @@
       <workItem from="1566454307096" duration="2826000" />
       <workItem from="1566800419575" duration="864000" />
       <workItem from="1566802174314" duration="6446000" />
-      <workItem from="1567436244383" duration="8502000" />
-      <workItem from="1567503953757" duration="913000" />
-      <workItem from="1567623172298" duration="299000" />
+      <workItem from="1566885248343" duration="9714000" />
+      <workItem from="1566978430719" duration="311000" />
     </task>
     <task id="LOCAL-00001" summary="Added Auth">
       <created>1566318970723</created>
@@ -364,25 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1566473201748</updated>
     </task>
-    <task id="LOCAL-00010" summary="Added">
-      <created>1566850474678</created>
+    <task id="LOCAL-00010" summary="Added register and login">
+      <created>1566890035066</created>
       <option name="number" value="00010" />
       <option name="presentableId" value="LOCAL-00010" />
       <option name="project" value="LOCAL" />
-      <updated>1566850474679</updated>
+      <updated>1566890035066</updated>
     </task>
-    <task id="LOCAL-00011" summary="Added projects page">
-      <created>1567447064760</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1567447064760</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="11" />
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74788000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -393,75 +242,39 @@
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
-  <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="2576" height="1056" extended-state="6" />
-    <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17845787" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" sideWeight="0.49980134" weight="0.32502708" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Statistic" order="11" weight="0.32899868" />
-      <window_info anchor="bottom" id="Unit Tests" order="12" weight="0.32899868" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="13" sideWeight="0.49920508" visible="true" weight="0.60996747" />
-      <window_info anchor="bottom" id="Event Log" order="14" sideWeight="0.5007949" side_tool="true" weight="0.60996747" />
-      <window_info anchor="bottom" id="TypeScript" order="15" sideWeight="0.49980134" weight="0.32977587" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2205438" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="NuGet" order="7" />
-      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32639793" />
-      <window_info anchor="bottom" id="Database Changes" order="10" />
-      <window_info anchor="bottom" id="Statistic" order="11" weight="0.32899868" />
-      <window_info anchor="bottom" id="Unit Tests" order="12" weight="0.32899868" />
-      <window_info anchor="bottom" id="Terminal" order="13" weight="0.61118335" />
-      <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.32899868" />
-      <window_info anchor="bottom" id="TypeScript" order="15" weight="0.32977587" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Errors In Solution" order="3" />
-      <window_info anchor="right" id="Database" order="4" />
-    </layout-to-restore>
-  </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
+    <option name="LOCAL_CHANGES_DETAILS_PREVIEW_SHOWN" value="true" />
     <MESSAGE value="Added Auth" />
     <MESSAGE value="Added project CRUD" />
     <MESSAGE value="Added documents" />
     <MESSAGE value="hehe" />
     <MESSAGE value="Added security on client" />
-    <MESSAGE value="Added" />
-    <MESSAGE value="Added projects page" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added projects page" />
+    <MESSAGE value="Added register and login" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added register and login" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="278" y="95" key="#Code_Cleanup_Options" />
+    <state x="278" y="95" key="#Code_Cleanup_Options/2736.1824" />
+    <state x="432" y="292" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" />
+    <state x="432" y="292" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1/2736.1824" />
+    <state x="117" y="50" key="SettingsEditor" />
+    <state x="117" y="50" key="SettingsEditor/2736.1824" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -472,267 +285,5 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
-  </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Client/src/actions/auth/registerUser.ts" />
-    <entry file="file://$PROJECT_DIR$/Client/src/store/configureStore.ts" />
-    <entry file="file://$PROJECT_DIR$/Client/src/pages/Home.tsx" />
-    <entry file="file://$PROJECT_DIR$/Client/src/components/publicRoute.tsx" />
-    <entry file="file://$PROJECT_DIR$/Client/src/pages/Home.css" />
-    <entry file="file://$PROJECT_DIR$/Client/src/components/privateRoute.tsx" />
-    <entry file="file://$PROJECT_DIR$/Client/src/pages/List.tsx" />
-    <entry file="file://$PROJECT_DIR$/Client/src/modules/login/Login.tsx" />
-    <entry file="file://$PROJECT_DIR$/Client/src/modules/home/Home.tsx" />
-    <entry file="file://$PROJECT_DIR$/Client/src/components/Menu.tsx" />
-    <entry file="file://$PROJECT_DIR$/Client/src/modules/routing/components/privateRoute.tsx" />
-    <entry file="file://$PROJECT_DIR$/Client/src/App.tsx" />
-    <entry file="file://$PROJECT_DIR$/Client/package.json" />
-    <entry file="file://$PROJECT_DIR$/Client/config/env.js" />
-    <entry file="file://$PROJECT_DIR$/Client/src/reducers/authReducer.ts" />
-    <entry file="file://$PROJECT_DIR$/Client/src/modules/routing/components/publicRoute.tsx" />
-    <entry file="file://$PROJECT_DIR$/Client/node_modules/@ionic/react/dist/types/components/utils/index.d.ts" />
-    <entry file="file://$PROJECT_DIR$/Client/src/modules/routing/Routing.tsx" />
-    <entry file="file://$PROJECT_DIR$/Client/node_modules/@ionic/react/dist/types/components/proxies.d.ts" />
-    <entry file="file://$PROJECT_DIR$/Client/src/modules/register/Register.tsx" />
-    <entry file="file://$PROJECT_DIR$/ClientOld/src/App.tsx" />
-    <entry file="file://$PROJECT_DIR$/clinet/src/index.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/pages/List.tsx" />
-    <entry file="file://$PROJECT_DIR$/clinet/src/modules/routing/components/privateRoute.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/modules/routing/components/publicRoute.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/store/configureStore.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/env.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="31" selection-start-column="31" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" selection-start-column="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/modules/css/Home.scss" />
-    <entry file="file://$PROJECT_DIR$/clinet/package.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/interfaces/project.interface.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/constants.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="48" selection-start-line="10" selection-start-column="48" selection-end-line="10" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/actions/auth/login.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/reducers/authReducer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-25">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#180#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/reducers/projectsReducer.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="13" column="6" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/modules/register/Register.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="81" selection-start-line="81" selection-end-line="81" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/project/Project.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/actions/auth/registerUser.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/reducers/documentReducer.ts" />
-    <entry file="file://$PROJECT_DIR$/clinet/src/actions/handleError.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="10" column="22" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/actions/auth/logout.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="4" column="3" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/reducers/index.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/actions/project/getProjects.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="42" selection-start-line="10" selection-start-column="42" selection-end-line="10" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/modules/projects/projects.controller.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#101#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/actions/getHeaders.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/modules/home/Home.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1100">
-          <caret line="46" column="17" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/App.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/modules/routing/Routing.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="20" column="81" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/modules/login/Login.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="36" column="24" selection-start-line="36" selection-start-column="24" selection-end-line="36" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#52#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Server/src/main.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
   </component>
 </project>
