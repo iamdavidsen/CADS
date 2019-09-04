@@ -7,6 +7,7 @@ import {ProjectItem} from "./components/projectItem";
 import {Header} from "../shared/components/Header";
 import {logout} from "../../actions/auth/logout";
 import {Box} from "grommet";
+import {CreateProjectModal} from "./components/createProjectModal";
 
 interface IProps {
     projects?: any[]
@@ -17,7 +18,7 @@ interface IProps {
 }
 
 interface IState {
-
+    showCreateProjectModal: boolean
 }
 
 const projectListStyle: React.CSSProperties = {
@@ -31,15 +32,29 @@ const listStyle: React.CSSProperties = {
 };
 
 class ProjectList extends React.Component<IProps, IState> {
+    constructor(props: IProps) {
+        super(props)
+        
+        this.state = {
+            showCreateProjectModal: false
+        }
+    }
+    
     componentWillMount(): void {
         this.props.actions.getProjects();
     }
     
     onAddProject = () => {
+        this.setState({showCreateProjectModal: true})
+    };
+    
+    hideModal = () => {
+        this.setState({ showCreateProjectModal: false })
     };
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         const {projects, actions: { logout }} = this.props;
+        const { showCreateProjectModal } = this.state;
 
         return (
             <div style={projectListStyle}>
@@ -47,6 +62,7 @@ class ProjectList extends React.Component<IProps, IState> {
                 <Box direction={"row"} style={listStyle} justify={"center"}>
                     {projects && projects.map(p => (<ProjectItem project={p}/>))}
                 </Box>
+                <CreateProjectModal shot={showCreateProjectModal} onHide={this.hideModal}/>
             </div>
         );
     }
