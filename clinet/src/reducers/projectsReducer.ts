@@ -15,7 +15,7 @@ export const project = (state = initialState, action: any): IProjectState => {
         case GET_PROJECTS_SUCCESS:
             return {
                 ...state,
-                projects: action
+                projects: action.data
             };
         default:
             return state

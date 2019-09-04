@@ -8,6 +8,7 @@ import {Header} from "../shared/components/Header";
 import {logout} from "../../actions/auth/logout";
 import {Box} from "grommet";
 import {CreateProjectModal} from "./components/createProjectModal";
+import {AppState} from "../../reducers";
 
 interface IProps {
     projects?: any[]
@@ -60,13 +61,14 @@ class ProjectList extends React.Component<IProps, IState> {
             <div style={projectListStyle}>
                 <Header user={"hello user"} onLogout={logout} onAddProject={this.onAddProject}/>
                 <Box direction={"row"} style={listStyle} justify={"center"}>
-                    {projects && projects.map(p => (<ProjectItem project={p}/>))}
+                    {projects && Array.isArray(projects) && projects.map(p => (<ProjectItem project={p}/>))}
                 </Box>
                 <CreateProjectModal shot={showCreateProjectModal} onHide={this.hideModal}/>
             </div>
         );
     }
 }
+
 
 const fakeprojectData = [
     { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
@@ -81,7 +83,7 @@ const fakeprojectData = [
     { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
 ];
 
-const mapStateToProps = (state: any) => {
+const mapStateToProps = (state: AppState) => {
     return {
         projects: fakeprojectData
     }
