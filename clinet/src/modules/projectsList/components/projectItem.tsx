@@ -1,14 +1,21 @@
 import * as React from 'react'
 
 import {Project} from "../../../../../Server/src/modules/projects/interfaces/project.interface";
-import {Heading} from "grommet";
+import {Box, Heading, Text} from "grommet";
+import {Link, NavLink} from "react-router-dom";
 
 interface IProps {
     project: Project
 }
 
+const linkStyle: React.CSSProperties = {
+    textDecoration: "none",
+    margin: "16px"
+};
+
 const itemStyle: React.CSSProperties = {
-    
+   background: "#0000FF",
+   borderRadius: "4px" 
 };
 
 
@@ -18,8 +25,11 @@ export const ProjectItem: React.FC<IProps> = ({ project }) => {
    };
     
   return (
-      <div style={{ ...itemStyle, ...bgStyle }}>
-          <Heading>{project.projectName}</Heading>
-      </div>
+      <NavLink to={`/project/${project.id}`} style={linkStyle} >
+          <Box style={itemStyle}>
+              <Heading>{project.projectName}</Heading>
+              <Text>{project.description}</Text>
+          </Box>
+      </NavLink>
   )  
 };

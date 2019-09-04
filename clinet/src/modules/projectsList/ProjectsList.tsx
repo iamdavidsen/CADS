@@ -3,10 +3,10 @@ import {Dispatch} from "redux";
 import {connect} from "react-redux";
 
 import {getProjects} from "../../actions/project/getProjects";
-import {Heading} from "grommet";
 import {ProjectItem} from "./components/projectItem";
 import {Header} from "../shared/components/Header";
 import {logout} from "../../actions/auth/logout";
+import {Box} from "grommet";
 
 interface IProps {
     projects?: any[]
@@ -44,16 +44,31 @@ class ProjectList extends React.Component<IProps, IState> {
         return (
             <div style={projectListStyle}>
                 <Header user={"hello user"} onLogout={logout} onAddProject={this.onAddProject}/>
-                <div style={listStyle}>
+                <Box direction={"row"} style={listStyle} justify={"center"}>
                     {projects && projects.map(p => (<ProjectItem project={p}/>))}
-                </div>
+                </Box>
             </div>
         );
     }
 }
 
+const fakeprojectData = [
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+];
+
 const mapStateToProps = (state: any) => {
-    return {}
+    return {
+        projects: fakeprojectData
+    }
 };
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
