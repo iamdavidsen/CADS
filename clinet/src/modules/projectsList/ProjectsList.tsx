@@ -25,6 +25,10 @@ const listStyle: React.CSSProperties = {
 };
 
 class ProjectList extends React.Component<IProps, IState> {
+    componentWillMount(): void {
+        this.props.actions.getProjects();
+    }
+
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         const {projects} = this.props;
 
