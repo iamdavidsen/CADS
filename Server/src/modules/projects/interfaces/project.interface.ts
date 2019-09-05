@@ -5,6 +5,6 @@ export interface Project extends Document {
     projectName: string;
     description?: string;
     imgUrl?: string;
-    creator: ObjectId;
-    members: ObjectId[];
+    creator: ObjectId | string;
+    members: ObjectId[] | string[];
 }

@@ -2,20 +2,29 @@ import * as React from 'react'
 import {Dispatch} from "redux";
 import {connect} from "react-redux";
 
-import {Project} from "../../../../Server/src/modules/projects/interfaces/project.interface";
+import {getProjects} from "../../actions/project/getProjects";
 import {ProjectItem} from "./components/projectItem";
-import {Heading} from "grommet";
+import {Header} from "../shared/components/Header";
+import {logout} from "../../actions/auth/logout";
+import {Box} from "grommet";
+import {CreateProjectModal} from "./components/createProjectModal";
+import {AppState} from "../../reducers";
 
 interface IProps {
-    projects: Project[]
+    projects?: any[]
+    actions: {
+        getProjects: () => void
+        logout: () => void
+    }
 }
 
 interface IState {
-
+    showCreateProjectModal: boolean
 }
 
 const projectListStyle: React.CSSProperties = {
-    
+    width: "100%",
+    minHeight: "100%"
 };
 
 const listStyle: React.CSSProperties = {
@@ -24,28 +33,68 @@ const listStyle: React.CSSProperties = {
 };
 
 class ProjectList extends React.Component<IProps, IState> {
-render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-    const { projects } = this.props;
+    constructor(props: IProps) {
+        super(props)
+        
+        this.state = {
+            showCreateProjectModal: false
+        }
+    }
     
-    return (
-        <div style={projectListStyle}>
-            <Heading>Projects</Heading>
-            <div style={listStyle}>
-                {projects.map(p => (<ProjectItem project={p} />))}
+    componentWillMount(): void {
+        this.props.actions.getProjects();
+    }
+    
+    onAddProject = () => {
+        this.setState({showCreateProjectModal: true})
+    };
+    
+    hideModal = () => {
+        this.setState({ showCreateProjectModal: false })
+    };
+
+    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
+        const {projects, actions: { logout }} = this.props;
+        const { showCreateProjectModal } = this.state;
+
+        return (
+            <div style={projectListStyle}>
+                <Header user={"hello user"} onLogout={logout} onAddProject={this.onAddProject}/>
+                <Box direction={"row"} style={listStyle} justify={"center"}>
+                    {projects && Array.isArray(projects) && projects.map(p => (<ProjectItem project={p}/>))}
+                </Box>
+                <CreateProjectModal shot={showCreateProjectModal} onHide={this.hideModal}/>
             </div>
-        </div>
-    );
-}
+        );
+    }
 }
 
-const mapStateToProps = (state: any) => {
+
+const fakeprojectData = [
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+];
+
+const mapStateToProps = (state: AppState) => {
     return {
-        
+        projects: fakeprojectData
     }
 };
 
 const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
+        actions: {
+            getProjects: () => dispatch(getProjects() as any),
+            logout: () => dispatch(logout() as any)
+        }
     }
 };
 

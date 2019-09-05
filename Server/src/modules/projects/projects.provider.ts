@@ -26,11 +26,17 @@ export class ProjectsProvider {
 
     async findAll(userId: string): Promise<Project[]> {
         return await this.projectModel.find({
-            $or: {
-                creator: mongoose.Types.ObjectId(userId),
-                members: {$all: [mongoose.Types.ObjectId(userId)]},
-            },
-        }).exec();
+            $or: [
+                {
+                    creator: mongoose.Types.ObjectId(userId),
+                },
+                {
+                    members: {
+                        $all: [mongoose.Types.ObjectId(userId)],
+                    },
+                },
+            ]},
+        ).exec();
     }
 
     async edit(id: string, project: EditProjectDto): Promise<Project | undefined> {
@@ -43,13 +49,13 @@ export class ProjectsProvider {
 
     async addToProject(id: string, idToAdd: string): Promise<Project | undefined> {
         return this.projectModel.findByIdAndUpdate(id, {
-            $push: { members: mongoose.Types.ObjectId(idToAdd) },
+            $push: {members: mongoose.Types.ObjectId(idToAdd)},
         });
     }
 
     async removeFromProject(id: string, idToRemove: string): Promise<Project | undefined> {
         return this.projectModel.findByIdAndUpdate(id, {
-            $pull: { members: mongoose.Types.ObjectId(idToRemove) },
+            $pull: {members: mongoose.Types.ObjectId(idToRemove)},
         });
     }
 

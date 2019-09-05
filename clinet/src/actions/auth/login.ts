@@ -16,7 +16,7 @@ export const login = (email: string, password: string) => {
     return async (dispatch: Dispatch) => {
         Axios.post(url, body)
             .then((response) => {
-                localStorage.setItem('user', response.data);;
+                localStorage.setItem('user', response.data.access_token);
                 
                 return dispatch({
                     type: LOGIN_SUCCESS,

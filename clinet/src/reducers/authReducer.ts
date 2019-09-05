@@ -8,28 +8,23 @@ import {
     LOGOUT
 } from '../constants';
 
-interface IAuthReducer {
+interface IAuthState {
     registerStatus: string,
     loggingIn: boolean,
     loggedIn: boolean,
-    user?: {
-        access_token: string
-        username: string
-        profilePictureUrl: string
-    }
+    user?: string | null
 }
 
 const userString = localStorage.getItem('user');
-const user = userString && JSON.parse(userString);
 
-const initialState: IAuthReducer = {
+const initialState: IAuthState = {
     registerStatus: '',
-    loggedIn: Boolean(user),
+    loggedIn: Boolean(userString),
     loggingIn: false,
-    user: user && user,
+    user: userString,
 };
 
-export const auth = (state = initialState, action: any): IAuthReducer => {
+export const auth = (state = initialState, action: any): IAuthState => {
     switch (action.type as string) {
         case REGISTER_USER_REQUEST:
         case REGISTER_USER_SUCCESS:
@@ -69,3 +64,4 @@ export const auth = (state = initialState, action: any): IAuthReducer => {
             return state
     }
 };
+

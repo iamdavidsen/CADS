@@ -6,7 +6,7 @@ import {Dispatch} from "redux";
 
 import {withRouter} from "react-router";
 
-import {LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE, REGISTER_USER_REQUEST} from "../../constants";
+import {LOGIN_FAILURE, LOGIN_SUCCESS} from "../../constants";
 
 import {login} from "../../actions/auth/login";
 
@@ -33,8 +33,8 @@ class Login extends Component<IProps, IState> {
     }
 
     componentWillUpdate(nextProps: Readonly<IProps>, nextState: Readonly<IState>, nextContext: any): void {
-        if (this.props.loginStatus === REGISTER_USER_REQUEST && this.props.loginStatus !== nextProps.loginStatus) {
-            // On bad request
+        if (this.props.loginStatus === LOGIN_FAILURE && this.props.loginStatus !== nextProps.loginStatus) {
+            // On failure
         }
     }
 
