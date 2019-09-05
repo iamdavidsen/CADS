@@ -59,11 +59,11 @@ class ProjectList extends React.Component<IProps, IState> {
 
         return (
             <div style={projectListStyle}>
-                <Header user={"hello user"} onLogout={logout} onAddProject={this.onAddProject}/>
+                <Header user={"user"} onLogout={logout} onAddProject={this.onAddProject}/>
                 <Box direction={"row"} style={listStyle} justify={"center"}>
-                    {projects && Array.isArray(projects) && projects.map(p => (<ProjectItem project={p}/>))}
+                    {projects && Array.isArray(projects) && projects.map(p => (<ProjectItem project={p} />))}
                 </Box>
-                <CreateProjectModal shot={showCreateProjectModal} onHide={this.hideModal}/>
+                <CreateProjectModal shot={showCreateProjectModal} onHide={this.hideModal} />
             </div>
         );
     }
@@ -71,8 +71,8 @@ class ProjectList extends React.Component<IProps, IState> {
 
 
 const fakeprojectData = [
-    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
-    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "Test" },
+    { id: "fuck this", creator: "", members: [], description: "This is a desc This is a desc This is a desc This is a desc This is a desc This is a desc This is a desc ", projectName: "This Is A Test On A Long Heading Name" },
     { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
     { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
     { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
