@@ -34,9 +34,9 @@ export const Header: React.FC<IProps> = ({ user, onLogout, onAddProject }) =>
                 </NavLink>
             </Box>
             <Box direction={"row"} align={"center"}>
-                <Button style={buttonStyle} title={"Add New Project"} onClick={onAddProject}>Add New Project</Button>
+                <Button style={buttonStyle} title={"Add New Project"} onClick={onAddProject} label={"Add New Project"}/>
                 <Text>{user}</Text>
-                <Button style={buttonStyle} title={"Logout"} onClick={onLogout}>Logout</Button>
+                <Button style={buttonStyle} title={"Logout"} onClick={onLogout} label={"Logout"} />
             </Box>
         </Box>
     );

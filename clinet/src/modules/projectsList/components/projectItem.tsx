@@ -3,7 +3,6 @@ import * as React from 'react'
 import { Project } from "../../../../../Server/src/modules/projects/interfaces/project.interface";
 import { Box, Heading, Text } from "grommet";
 import { Link, NavLink } from "react-router-dom";
-import { Button } from 'grommet/es6';
 
 interface IProps {
     project: Project
@@ -38,10 +37,6 @@ const itemStyle: React.CSSProperties = {
 
 
 export const ProjectItem: React.FC<IProps> = ({ project }) => {
-    const bgStyle: React.CSSProperties = {
-        backgroundImage: `url('${project.imgUrl}')`
-    };
-
     return (
         <NavLink to={`/project/${project.id}`} style={linkStyle} >
             <Box style={itemStyle}>

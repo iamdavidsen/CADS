@@ -2,9 +2,9 @@ import Axios from "axios";
 import {Dispatch} from "redux";
 
 import {
-    GET_PROJECTS_REQUEST,
-    GET_PROJECTS_SUCCESS,
-    GET_PROJECTS_FAILURE
+    DELETE_PROJECT_REQUEST,
+    DELETE_PROJECT_SUCCESS,
+    DELETE_PROJECT_FAILURE
 } from "../../constants";
 
 import {BASE_URL} from "../../env";
@@ -12,20 +12,20 @@ import {handleError} from "../handleError";
 
 import {getHeaders} from "../getHeaders";
 
-export const getProjects = () => {
-    let url = `${BASE_URL}/projects`;
+export const deleteProject = (projectId: string) => {
+    let url = `${BASE_URL}/projects/${projectId}`;
 
     return (dispatch: Dispatch) => {
-        dispatch({ type: GET_PROJECTS_REQUEST });
-        Axios.get(url, getHeaders())
+        dispatch({ type: DELETE_PROJECT_REQUEST });
+        Axios.delete(url, getHeaders())
             .then((response) => dispatch({
-                type: GET_PROJECTS_SUCCESS,
+                type: DELETE_PROJECT_SUCCESS,
                 data: response.data
             }))
             .catch((error) => {
                 handleError(error, dispatch);
                 return dispatch({
-                    type: GET_PROJECTS_FAILURE
+                    type: DELETE_PROJECT_FAILURE
                 });
             })
     }

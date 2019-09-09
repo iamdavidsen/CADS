@@ -9,17 +9,23 @@ import {logout} from "../../actions/auth/logout";
 import {Box} from "grommet";
 import {CreateProjectModal} from "./components/createProjectModal";
 import {AppState} from "../../reducers";
+import {CreateProjectDto} from "../../../../Server/src/modules/projects/dto/createProject.dto";
+import {createProject} from "../../actions/project/createProject";
+import {ChangeEvent} from "react";
+import {CreateProjectItem} from "./components/createProjectItem";
 
 interface IProps {
     projects?: any[]
     actions: {
         getProjects: () => void
         logout: () => void
+        createProject: (project: CreateProjectDto) => void
     }
 }
 
 interface IState {
-    showCreateProjectModal: boolean
+    showCreateProjectModal: boolean,
+    createProjectDto: CreateProjectDto,
 }
 
 const projectListStyle: React.CSSProperties = {
@@ -35,57 +41,75 @@ const listStyle: React.CSSProperties = {
 class ProjectList extends React.Component<IProps, IState> {
     constructor(props: IProps) {
         super(props)
-        
+
         this.state = {
-            showCreateProjectModal: false
+            showCreateProjectModal: false,
+            createProjectDto: {
+                projectName: '',
+                description: ''
+            }
         }
     }
-    
+
     componentWillMount(): void {
         this.props.actions.getProjects();
     }
-    
+
     onAddProject = () => {
         this.setState({showCreateProjectModal: true})
     };
-    
+
     hideModal = () => {
-        this.setState({ showCreateProjectModal: false })
+        this.setState({showCreateProjectModal: false})
+    };
+
+    createProject = () => {
+        this.props.actions.createProject(this.state.createProjectDto)
+    };
+
+    changeProjectTitle = (e: ChangeEvent<HTMLInputElement>) => {
+        this.setState({
+            createProjectDto: {
+                ...this.state.createProjectDto,
+                projectName: e.target.value
+            }
+        })
+    };
+
+    changeProjectDesc = (e: ChangeEvent<HTMLInputElement>) => {
+        this.setState({
+            createProjectDto: {
+                ...this.state.createProjectDto,
+                description: e.target.value
+            }
+        })
     };
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-        const {projects, actions: { logout }} = this.props;
-        const { showCreateProjectModal } = this.state;
+        const {projects, actions: {logout}} = this.props;
+        const {showCreateProjectModal, createProjectDto: {description, projectName}} = this.state;
 
         return (
             <div style={projectListStyle}>
                 <Header user={"user"} onLogout={logout} onAddProject={this.onAddProject}/>
                 <Box direction={"row"} style={listStyle} justify={"center"}>
-                    {projects && Array.isArray(projects) && projects.map(p => (<ProjectItem project={p} />))}
+                    {projects && Array.isArray(projects) && projects.map(p => (<ProjectItem project={p}/>))}
+                    <CreateProjectItem addProject={this.onAddProject}/>
                 </Box>
-                <CreateProjectModal shot={showCreateProjectModal} onHide={this.hideModal} />
+                <CreateProjectModal shot={showCreateProjectModal} onHide={this.hideModal} description={description}
+                                    title={projectName}
+                                    changeDescription={this.changeProjectDesc}
+                                    changeTitle={this.changeProjectTitle}
+                                    createProject={this.createProject}
+                />
             </div>
         );
     }
 }
 
-
-const fakeprojectData = [
-    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "Test" },
-    { id: "fuck this", creator: "", members: [], description: "This is a desc This is a desc This is a desc This is a desc This is a desc This is a desc This is a desc ", projectName: "This Is A Test On A Long Heading Name" },
-    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
-    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
-    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
-    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
-    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
-    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
-    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
-    { id: "fuck this", creator: "", members: [], description: "This is a desc", projectName: "HHahahhahhahhah" },
-];
-
 const mapStateToProps = (state: AppState) => {
     return {
-        projects: fakeprojectData
+        projects: state.project.projects
     }
 };
 
@@ -93,7 +117,8 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
     return {
         actions: {
             getProjects: () => dispatch(getProjects() as any),
-            logout: () => dispatch(logout() as any)
+            logout: () => dispatch(logout() as any),
+            createProject: (project: CreateProjectDto) => dispatch(createProject(project) as any)
         }
     }
 };

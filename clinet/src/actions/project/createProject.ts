@@ -4,28 +4,30 @@ import {Dispatch} from "redux";
 import {
     GET_PROJECTS_REQUEST,
     GET_PROJECTS_SUCCESS,
-    GET_PROJECTS_FAILURE
+    GET_PROJECTS_FAILURE, CREATE_PROJECT_REQUEST, CREATE_PROJECT_SUCCESS, CREATE_PROJECT_FAILURE
 } from "../../constants";
 
 import {BASE_URL} from "../../env";
 import {handleError} from "../handleError";
 
+import {CreateUserDto} from "../../../../Server/src/modules/users/dto/createUser.dto";
 import {getHeaders} from "../getHeaders";
+import {CreateProjectDto} from "../../../../Server/src/modules/projects/dto/createProject.dto";
 
-export const getProjects = () => {
+export const createProject = (project: CreateProjectDto) => {
     let url = `${BASE_URL}/projects`;
 
     return (dispatch: Dispatch) => {
-        dispatch({ type: GET_PROJECTS_REQUEST });
-        Axios.get(url, getHeaders())
+        dispatch({ type: CREATE_PROJECT_REQUEST });
+        Axios.post(url, project, getHeaders())
             .then((response) => dispatch({
-                type: GET_PROJECTS_SUCCESS,
+                type: CREATE_PROJECT_SUCCESS,
                 data: response.data
             }))
             .catch((error) => {
                 handleError(error, dispatch);
                 return dispatch({
-                    type: GET_PROJECTS_FAILURE
+                    type: CREATE_PROJECT_FAILURE
                 });
             })
     }
