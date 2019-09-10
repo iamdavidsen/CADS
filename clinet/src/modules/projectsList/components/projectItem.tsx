@@ -15,8 +15,7 @@ const linkStyle: React.CSSProperties = {
 
 const textStyle: React.CSSProperties = {
     color: "black",
-    fontSize: "16px",
-    
+    fontSize: "16px"
 }
 const headingStyle: React.CSSProperties = {
     color: "black",
@@ -25,7 +24,7 @@ const headingStyle: React.CSSProperties = {
     lineHeight: "25px"
 }
 
-const itemStyle: React.CSSProperties = {
+const boxStyle: React.CSSProperties = {
     background: "#EFEEFE",
     borderRadius: "6px",
     padding: "10px 5px",
@@ -39,7 +38,7 @@ const itemStyle: React.CSSProperties = {
 export const ProjectItem: React.FC<IProps> = ({ project }) => {
     return (
         <NavLink to={`/project/${project.id}`} style={linkStyle} >
-            <Box style={itemStyle}>
+            <Box style={boxStyle}>
                 <Heading style={headingStyle}>{project.projectName}</Heading>
                 <Text style={textStyle}>{project.description}</Text>
             </Box>

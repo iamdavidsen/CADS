@@ -35,7 +35,7 @@ class Project extends React.Component {
    render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
        return (
            <div style={pageStyle}>
-               <Header user={"user"} onLogout={logout} onAddProject={this.onAddProject} />
+               <Header onLogout={logout} onAddProject={this.onAddProject} />
                <div style={whereDoIGo}> I don't know where i should be? :( </div>
            </div>
        );

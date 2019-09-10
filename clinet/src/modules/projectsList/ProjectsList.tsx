@@ -91,7 +91,7 @@ class ProjectList extends React.Component<IProps, IState> {
 
         return (
             <div style={projectListStyle}>
-                <Header user={"user"} onLogout={logout} onAddProject={this.onAddProject}/>
+                <Header onLogout={logout} onAddProject={this.onAddProject}/>
                 <Box direction={"row"} style={listStyle} justify={"center"}>
                     {projects && Array.isArray(projects) && projects.map(p => (<ProjectItem project={p}/>))}
                     <CreateProjectItem addProject={this.onAddProject}/>
