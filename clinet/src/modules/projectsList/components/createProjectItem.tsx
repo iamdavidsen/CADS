@@ -4,9 +4,8 @@ import { Box, Heading, Text } from "grommet";
 
 const headingStyle: React.CSSProperties = {
     color: "black",
-    margin: "0 0 13px 0",
-    fontSize: "20px",
-    lineHeight: "25px"
+    fontSize: "16px",
+    textAlign: "center",
 };
 
 const itemStyle: React.CSSProperties = {
@@ -15,19 +14,24 @@ const itemStyle: React.CSSProperties = {
     padding: "10px 5px",
     width: "300px",
     height: "125px",
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
     wordBreak: "break-word",
-    overflow: "hidden"
+    overflow: "hidden",
+    margin: "16px",
+    cursor: "pointer"
 };
 
 interface IProps {
-   addProject: () => void 
+    addProject: () => void
 }
 
 
 export const CreateProjectItem: React.FC<IProps> = ({ addProject }) => {
     return (
-            <Box style={itemStyle} onClick={addProject}>
-                <Heading style={headingStyle}>Create Project</Heading>
-            </Box>
+        <Box style={itemStyle} onClick={addProject}>
+            <text style={headingStyle}>Create new Project</text>
+        </Box>
     )
 };
