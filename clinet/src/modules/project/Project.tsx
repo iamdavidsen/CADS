@@ -6,8 +6,14 @@ import { Header } from "../shared/components/Header";
 import { logout } from "../../actions/auth/logout";
 import { CreateProjectModal } from "../projectsList/components/createProjectModal";
 import { Box } from 'grommet';
+import {match} from "react-router";
 
 interface IProps {
+    match: {
+      params: {
+          id: string
+      }  
+    },
     actions: {
         logout: () => void
     }
@@ -27,7 +33,13 @@ const whereDoIGo: React.CSSProperties = {
     margin: "30% 0 0 0"
 }
 
-class Project extends React.Component {
+class Project extends React.Component<IProps, IState> {
+    componentDidMount(): void {
+        const { params: { id } } = this.props.match
+        
+        
+    }
+
     onAddProject = () => {
         this.setState({ showCreateProjectModal: true })
     };

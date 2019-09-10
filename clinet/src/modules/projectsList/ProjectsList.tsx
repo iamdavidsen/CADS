@@ -13,9 +13,12 @@ import {CreateProjectDto} from "../../../../Server/src/modules/projects/dto/crea
 import {createProject} from "../../actions/project/createProject";
 import {ChangeEvent} from "react";
 import {CreateProjectItem} from "./components/createProjectItem";
+import {CREATE_PROJECT_SUCCESS} from "../../constants";
+import {IProject} from "../../models/IProject";
 
 interface IProps {
-    projects?: any[]
+    projects?: IProject[]
+    createProjectStatus: string
     actions: {
         getProjects: () => void
         logout: () => void
@@ -53,6 +56,12 @@ class ProjectList extends React.Component<IProps, IState> {
 
     componentWillMount(): void {
         this.props.actions.getProjects();
+    }
+    
+    componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>, snapshot?: any): void {
+        if (this.props.createProjectStatus == CREATE_PROJECT_SUCCESS && this.props.createProjectStatus != prevProps.createProjectStatus) {
+            this.hideModal()
+        }
     }
 
     onAddProject = () => {
@@ -109,7 +118,8 @@ class ProjectList extends React.Component<IProps, IState> {
 
 const mapStateToProps = (state: AppState) => {
     return {
-        projects: state.project.projects
+        projects: state.project.projects,
+        createProjectStatus: state.project.createProjectStatus
     }
 };
 
