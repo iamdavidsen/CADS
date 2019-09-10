@@ -2,7 +2,7 @@ import * as React from 'react'
 
 import { Box, Heading, Text } from "grommet";
 
-const headingStyle: React.CSSProperties = {
+const textStyle: React.CSSProperties = {
     color: "black",
     fontSize: "16px",
     textAlign: "center",
@@ -31,7 +31,7 @@ interface IProps {
 export const CreateProjectItem: React.FC<IProps> = ({ addProject }) => {
     return (
         <Box style={itemStyle} onClick={addProject}>
-            <text style={headingStyle}>Create new Project</text>
+            <text style={textStyle}>Create new Project</text>
         </Box>
     )
 };
