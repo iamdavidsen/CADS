@@ -10,7 +10,6 @@ import {
 import {BASE_URL} from "../../env";
 import {handleError} from "../handleError";
 
-import {CreateUserDto} from "../../../../Server/src/modules/users/dto/createUser.dto";
 import {getHeaders} from "../getHeaders";
 import {CreateProjectDto} from "../../../../Server/src/modules/projects/dto/createProject.dto";
 

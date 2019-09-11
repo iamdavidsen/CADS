@@ -13,7 +13,7 @@ import {handleError} from "../handleError";
 import {getHeaders} from "../getHeaders";
 
 export const getProject = (id: string) => {
-    let url = `${BASE_URL}/${id}`;
+    let url = `${BASE_URL}/projects/${id}`;
 
     return (dispatch: Dispatch) => {
         dispatch({ type: GET_PROJECT_REQUEST });

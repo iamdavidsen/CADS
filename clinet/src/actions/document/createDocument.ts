@@ -13,8 +13,8 @@ import {handleError} from "../handleError";
 import {getHeaders} from "../getHeaders";
 import {AddDocumentDto} from "../../../../Server/src/modules/documents/dto/addDocument.dto";
 
-export const createDocument = (document: AddDocumentDto) => {
-    let url = `${BASE_URL}/documents`;
+export const createDocument = (projectId: string, document: AddDocumentDto) => {
+    let url = `${BASE_URL}/documents/project/${projectId}`;
 
     return (dispatch: Dispatch) => {
         dispatch({ type: CREATE_DOCUMENT_REQUEST });

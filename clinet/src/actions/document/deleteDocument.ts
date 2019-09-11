@@ -12,15 +12,16 @@ import {handleError} from "../handleError";
 
 import {getHeaders} from "../getHeaders";
 
-export const deleteDocument = (doucmentId: string) => {
-    let url = `${BASE_URL}/documents/${doucmentId}`;
+export const deleteDocument = (documentId: string) => {
+    let url = `${BASE_URL}/documents/${documentId}`;
 
     return (dispatch: Dispatch) => {
         dispatch({ type: DELETE_DOCUMENT_REQUEST });
         Axios.delete(url, getHeaders())
             .then((response) => dispatch({
                 type: DELETE_DOCUMENT_SUCCESS,
-                data: response.data
+                data: response.data,
+                id: documentId
             }))
             .catch((error) => {
                 handleError(error, dispatch);

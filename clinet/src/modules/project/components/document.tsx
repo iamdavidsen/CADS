@@ -9,7 +9,7 @@ interface IProps {
 
 export const Document: React.FC<IProps> = ({document}) => {
     return (
-        <Box>
+        <Box border={"all"} round={"medium"} pad={"medium"}>
             <Heading>{document.documentTitle}</Heading>
             <ReactMarkdown source={document.content} />          
         </Box>
