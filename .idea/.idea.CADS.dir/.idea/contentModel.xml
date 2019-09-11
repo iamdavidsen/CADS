@@ -32,6 +32,7 @@
         <e p="react-redux" t="IncludeRecursive" />
         <e p="react-router" t="IncludeRecursive" />
         <e p="react-router-dom" t="IncludeRecursive" />
+        <e p="react-syntax-highlighter" t="IncludeRecursive" />
         <e p="redux" t="IncludeRecursive" />
         <e p="redux-logger" t="IncludeRecursive" />
         <e p="redux-thunk" t="IncludeRecursive" />
@@ -62,6 +63,7 @@
       <e p="clinet\node_modules\react-router" t="IncludeRecursive" />
       <e p="clinet\node_modules\react-router-dom" t="IncludeRecursive" />
       <e p="clinet\node_modules\react-scripts" t="IncludeRecursive" />
+      <e p="clinet\node_modules\react-syntax-highlighter" t="IncludeRecursive" />
       <e p="clinet\node_modules\realpath-native" t="IncludeRecursive" />
       <e p="clinet\node_modules\redux" t="IncludeRecursive" />
       <e p="clinet\node_modules\redux-logger" t="IncludeRecursive" />

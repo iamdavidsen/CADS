@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import {Box, Button, Heading, Layer, Text, TextArea, TextInput} from "grommet";
+import {Box, Button, Form, Heading, Layer, Text, TextArea, TextInput} from "grommet";
 import {ChangeEvent} from "react";
 import {IDocument} from "../../../models/IDocument";
 
@@ -30,12 +30,13 @@ export const CreateDocumentModal: React.FC<IProps> = ({
         <Layer
             onEsc={onHide}
             onClickOutside={onHide}
-            full
         >
-            <Box pad={"large"}>
+            <Box pad={"large"} height={"xxlarge"} width={"large"} gap={"small"}>
                 <Heading>{document._id ? "Edit Document" : "Create Document"}</Heading>
-                <TextInput value={document.documentTitle} onChange={changeTitle}/>
-                <TextArea value={document.content || ''} onChange={changeContent}/>
+                <TextInput value={document.documentTitle} onChange={changeTitle}  />
+                <Box flex={"grow"}>
+                    <TextArea resize={false} fill value={document.content || ''} onChange={changeContent}/>
+                </Box>
                 <Box direction={"row"} justify={"end"} pad={"large"}>
                     <Button onClick={onHide} label={"Cancel"} plain color={"secondary"}/>
                     {

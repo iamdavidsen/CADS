@@ -19,10 +19,18 @@ import {getDocuments} from "../../actions/document/getDocuments";
 import {AppState} from "../../reducers";
 import {CreateDocumentModal} from "./components/createDocumentModal";
 import {ChangeEvent} from "react";
+import {CREATE_DOCUMENT_SUCCESS, UPDATE_DOCUMENT_SUCCESS} from "../../constants";
+
+const docWrapperStyle: React.CSSProperties = {
+    flex: "1 1 700px"
+};
 
 interface IProps {
     project?: IProject
     documents?: IDocument[]
+    createDocumentsStatus: string
+    updateDocumentsStatus: string
+    deleteDocumentsStatus: string
     match: {
         params: {
             id: string
@@ -41,6 +49,7 @@ interface IProps {
 interface IState {
     document: IDocument
     showEditModal: boolean
+    filter: string
 }
 
 const pageStyle: React.CSSProperties = {
@@ -54,7 +63,8 @@ class Project extends React.Component<IProps, IState> {
 
         this.state = {
             document: this.setDefaultDocument(),
-            showEditModal: false
+            showEditModal: false,
+            filter: ''
         }
 
     }
@@ -64,6 +74,25 @@ class Project extends React.Component<IProps, IState> {
 
         getProject(id);
         getDocuments(id)
+    }
+
+    componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>, snapshot?: any): void {
+        const {documents, createDocumentsStatus, updateDocumentsStatus} = this.props;
+        
+        if (createDocumentsStatus == CREATE_DOCUMENT_SUCCESS && createDocumentsStatus != prevProps.createDocumentsStatus) {
+            this.onHideEditModal();
+            
+            const lastDoc = documents && documents[documents.length - 1]; 
+            
+            if (lastDoc) {
+                this.setState({ document: lastDoc })
+            }
+        }
+
+
+        if (updateDocumentsStatus == UPDATE_DOCUMENT_SUCCESS && updateDocumentsStatus != prevProps.updateDocumentsStatus) {
+            this.onHideEditModal()
+        }
     }
 
     setDefaultDocument = (): IDocument => {
@@ -112,7 +141,7 @@ class Project extends React.Component<IProps, IState> {
         })
     };
 
-    onSaveDocument() {
+    onSaveDocument = () => {
         const {content, documentTitle, _id} = this.state.document;
 
         if (!_id) return;
@@ -133,23 +162,35 @@ class Project extends React.Component<IProps, IState> {
 
     onHideEditModal = () => {
         this.setState({
-            showEditModal: false
+            showEditModal: false,
+            document: this.props.documents && this.props.documents.find(d => d._id == this.state.document._id) || this.setDefaultDocument()
         })
+    };
+    
+    onSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
+        this.setState({ filter: e.target.value })
+    };
+    
+    searchFilter = (doc: IDocument) :boolean => {
+        const search = this.state.filter;
+
+        return doc.documentTitle.includes(search) || doc.content.includes(search)
     };
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
         const {documents, project} = this.props;
-        const {document} = this.state;
+        const {document, filter} = this.state;
+        
+        const filteredDocs = documents && (filter == '' ? documents : documents.filter(this.searchFilter));
+
 
         return (
             <div style={pageStyle}>
                 <Header onLogout={logout} onAddProject={this.onAddDocument}/>
-                <Box direction={"row"} border={"right"}>
-                    <Box>
-                        <DocumentList onClickItem={this.onSelectDocument} project={project} documents={documents}/>
-                    </Box>
-                    <Box pad={"large"} flex={"grow"}>
-                        {document._id && <Document document={document}/>}
+                <Box direction={"row"} wrap>
+                    <DocumentList search={filter} selectedId={document._id} onClickItem={this.onSelectDocument} onSearchChange={this.onSearchChange} project={project} documents={filteredDocs}/>
+                    <Box style={docWrapperStyle} pad={"medium"}>
+                        {document._id && <Document document={document} onEdit={this.onEditDocument} onDelete={this.onDeleteDocument}/>}
                     </Box>
                 </Box>
                 <CreateDocumentModal show={this.state.showEditModal} onHide={this.onHideEditModal}
@@ -164,7 +205,10 @@ class Project extends React.Component<IProps, IState> {
 const mapStateToProps = (state: AppState) => {
     return {
         project: state.project.project,
-        documents: state.document.documents
+        documents: state.document.documents,
+        createDocumentsStatus: state.document.createDocumentsStatus,
+        updateDocumentsStatus: state.document.updateDocumentsStatus,
+        deleteDocumentsStatus: state.document.deleteDocumentsStatus,
     }
 };
 

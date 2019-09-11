@@ -14,7 +14,7 @@ import {
     UPDATE_DOCUMENT_FAILURE,
     DELETE_DOCUMENT_SUCCESS,
     DELETE_DOCUMENT_REQUEST,
-    DELETE_DOCUMENT_FAILURE
+    DELETE_DOCUMENT_FAILURE, CREATE_DOCUMENT_SUCCESS, CREATE_DOCUMENT_REQUEST, CREATE_DOCUMENT_FAILURE
 } from '../constants';
 import {IDocument} from "../models/IDocument";
 
@@ -50,14 +50,14 @@ export const document = (state = initialState, action: any): IDocumentsState => 
             };
 
         //  CREATE Document
-        case CREATE_PROJECT_SUCCESS:
+        case CREATE_DOCUMENT_SUCCESS:
             return {
                 ...state,
                 documents: [...(state.documents || []), action.data],
                 createDocumentsStatus: action.type
             };
-        case  CREATE_PROJECT_REQUEST:
-        case  CREATE_PROJECT_FAILURE:
+        case  CREATE_DOCUMENT_REQUEST:
+        case  CREATE_DOCUMENT_FAILURE:
             return {
                 ...state,
                 createDocumentsStatus: action.type
