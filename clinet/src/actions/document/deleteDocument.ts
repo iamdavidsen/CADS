@@ -12,7 +12,7 @@ import {handleError} from "../handleError";
 
 import {getHeaders} from "../getHeaders";
 
-export const deleteProject = (doucmentId: string) => {
+export const deleteDocument = (doucmentId: string) => {
     let url = `${BASE_URL}/documents/${doucmentId}`;
 
     return (dispatch: Dispatch) => {

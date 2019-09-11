@@ -13,7 +13,7 @@ import {handleError} from "../handleError";
 import {getHeaders} from "../getHeaders";
 import {EditDocumentDto} from "../../../../Server/src/modules/documents/dto/editDocument.dto";
 
-export const editProject = (documentId: string, document: EditDocumentDto) => {
+export const editDocument = (documentId: string, document: EditDocumentDto) => {
     let url = `${BASE_URL}/documents/${documentId}`;
 
     return (dispatch: Dispatch) => {

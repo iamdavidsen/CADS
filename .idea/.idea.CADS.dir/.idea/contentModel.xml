@@ -60,6 +60,7 @@
       <e p="clinet\node_modules\jest-worker" t="IncludeRecursive" />
       <e p="clinet\node_modules\react" t="IncludeRecursive" />
       <e p="clinet\node_modules\react-dom" t="IncludeRecursive" />
+      <e p="clinet\node_modules\react-markdown" t="IncludeRecursive" />
       <e p="clinet\node_modules\react-redux" t="IncludeRecursive" />
       <e p="clinet\node_modules\react-router" t="IncludeRecursive" />
       <e p="clinet\node_modules\react-router-dom" t="IncludeRecursive" />
