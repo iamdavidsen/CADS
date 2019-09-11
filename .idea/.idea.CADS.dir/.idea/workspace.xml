@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545d72a8-d72b-465a-a8d5-8f723058666a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/clinet/src/modules/project/components/codeBlock.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clinet/src/modules/project/Project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/project/Project.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/modules/project/components/createDocumentModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/project/components/createDocumentModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/modules/project/components/document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/project/components/document.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clinet/src/modules/project/components/documentItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/project/components/documentItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/modules/project/components/documentsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/project/components/documentsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/reducers/documentsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/reducers/documentsReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,7 +45,6 @@
         <option value="$PROJECT_DIR$/clinet/src/models/IProject.ts" />
         <option value="$PROJECT_DIR$/clinet/src/models/IUser.ts" />
         <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/components/createProjectModal.tsx" />
-        <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/actions/project/addUser.ts" />
         <option value="$PROJECT_DIR$/clinet/src/reducers/index.ts" />
         <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/components/projectItem.tsx" />
@@ -75,7 +67,6 @@
         <option value="$PROJECT_DIR$/clinet/src/actions/project/getProject.ts" />
         <option value="$PROJECT_DIR$/clinet/src/actions/project/createProject.ts" />
         <option value="$PROJECT_DIR$/clinet/src/actions/document/createDocument.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/modules/project/components/documentItem.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/modules/project/components/documentsList.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/modules/project/components/codeBlock.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/reducers/documentsReducer.ts" />
@@ -84,7 +75,9 @@
         <option value="$PROJECT_DIR$/Server/src/app.service.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/documents/documents.provider.ts" />
         <option value="$PROJECT_DIR$/clinet/src/modules/project/components/createDocumentModal.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/project/components/documentItem.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/modules/project/Project.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" />
       </list>
     </option>
   </component>
@@ -288,7 +281,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568194409678</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Whoop Whoop It STILL WORKS">
+      <created>1568201157599</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1568201157599</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +339,8 @@
     <MESSAGE value="Added all actions" />
     <MESSAGE value="merge" />
     <MESSAGE value="Whoop Whoop Its working :P" />
-    <option name="LAST_COMMIT_MESSAGE" value="Whoop Whoop Its working :P" />
+    <MESSAGE value="Whoop Whoop It STILL WORKS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Whoop Whoop It STILL WORKS" />
   </component>
   <component name="WindowStateProjectService">
     <state x="278" y="95" key="#Code_Cleanup_Options" />
@@ -366,7 +367,7 @@
         </breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/clinet/src/modules/project/Project.tsx</url>
-          <line>186</line>
+          <line>187</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>

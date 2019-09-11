@@ -54,7 +54,8 @@ interface IState {
 
 const pageStyle: React.CSSProperties = {
     width: "100%",
-    minHeight: "100%"
+    height: "100%",
+    overflow: "hidden"
 };
 
 class Project extends React.Component<IProps, IState> {
@@ -187,7 +188,7 @@ class Project extends React.Component<IProps, IState> {
         return (
             <div style={pageStyle}>
                 <Header onLogout={logout} onAddProject={this.onAddDocument}/>
-                <Box direction={"row"} wrap>
+                <Box direction={"row"} wrap overflow={"auto"} height={"100%"}>
                     <DocumentList search={filter} selectedId={document._id} onClickItem={this.onSelectDocument} onSearchChange={this.onSearchChange} project={project} documents={filteredDocs}/>
                     <Box style={docWrapperStyle} pad={"medium"}>
                         {document._id && <Document document={document} onEdit={this.onEditDocument} onDelete={this.onDeleteDocument}/>}
