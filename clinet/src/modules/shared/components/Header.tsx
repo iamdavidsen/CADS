@@ -1,11 +1,12 @@
 import * as React from 'react'
 import { Box, Button, Heading } from "grommet";
-import {Add} from "grommet-icons";
+import {Add, Group} from "grommet-icons";
 import { Link, NavLink } from 'react-router-dom';
 
 interface IProps {
     onLogout: () => void
     onAddProject: () => void
+    onAddUser?: () => void
 }
 
 const logoTextStyle: React.CSSProperties = {
@@ -25,7 +26,7 @@ const navbarStyle: React.CSSProperties = {
     padding: "0 10px 0 10px",
 }
 
-export const Header: React.FC<IProps> = ({ onLogout, onAddProject }) =>
+export const Header: React.FC<IProps> = ({ onLogout, onAddProject, onAddUser }) =>
     (
         <Box style={navbarStyle} direction={"row"} align={"center"} justify={"between"} background={"#0077F0"}>
             <Box direction={"row"} align={"center"}>
@@ -34,6 +35,7 @@ export const Header: React.FC<IProps> = ({ onLogout, onAddProject }) =>
                 </NavLink>
             </Box>
             <Box direction={"row"} align={"center"}>
+                {onAddUser && <Button style={buttonStyle} title={"Add New Project"} onClick={onAddUser} icon={<Group/>}/> }
                 <Button style={buttonStyle} title={"Add New Project"} onClick={onAddProject} icon={<Add/>}/>
                 <Button style={buttonStyle} title={"Logout"} onClick={onLogout} label={"Logout"} />
             </Box>

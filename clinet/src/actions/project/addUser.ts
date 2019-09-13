@@ -21,7 +21,8 @@ export const addUser = (projectId: string, project: AddToProjectDto) => {
         Axios.patch(url, project, getHeaders())
             .then((response) => dispatch({
                 type: ADD_USER_SUCCESS,
-                data: response.data
+                data: response.data,
+                email: project.emailToAdd
             }))
             .catch((error) => {
                 handleError(error, dispatch);

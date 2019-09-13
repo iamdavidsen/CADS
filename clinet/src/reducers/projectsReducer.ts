@@ -10,7 +10,13 @@ import {
     GET_PROJECTS_FAILURE,
     GET_MEMBERS_SUCCESS,
     GET_MEMBERS_REQUEST,
-    GET_MEMBERS_FAILURE
+    GET_MEMBERS_FAILURE,
+    ADD_USER_REQUEST,
+    ADD_USER_FAILURE,
+    ADD_USER_SUCCESS,
+    REMOVE_USER_SUCCESS,
+    REMOVE_USER_REQUEST,
+    REMOVE_USER_FAILURE
 } from '../constants';
 
 import {IProject} from "../models/IProject";
@@ -22,8 +28,10 @@ interface IProjectState {
     members?: IMember[]
     getProjectStatus: string
     getProjectsStatus: string
-    getMembersStatus: string
     createProjectStatus: string
+    getMembersStatus: string
+    addMembersStatus: string
+    removeMembersStatus: string
 }
 
 const initialState: IProjectState = {
@@ -31,6 +39,8 @@ const initialState: IProjectState = {
     getProjectsStatus: '',
     getMembersStatus: '',
     createProjectStatus: '',
+    addMembersStatus: '',
+    removeMembersStatus: ''
 };
 
 export const project = (state = initialState, action: any): IProjectState => {
@@ -63,7 +73,23 @@ export const project = (state = initialState, action: any): IProjectState => {
                 ...state,
                 getProjectsStatus: action.type
             };
-
+            
+        //  CREATE PROJECT
+        case CREATE_PROJECT_SUCCESS:
+            return {
+                ...state,
+                createProjectStatus: action.type,
+                projects: [...state.projects || [], action.data]
+            };
+        case  CREATE_PROJECT_REQUEST:
+        case  CREATE_PROJECT_FAILURE:
+            return {
+              ...state,
+              createProjectStatus: action.type  
+            };
+        default:
+            return state
+        
         //  GET Members
         case GET_MEMBERS_SUCCESS:
             return {
@@ -80,21 +106,35 @@ export const project = (state = initialState, action: any): IProjectState => {
             };
 
 
-        //  CREATE PROJECT
-        case CREATE_PROJECT_SUCCESS:
+        //  Add Member
+        case ADD_USER_SUCCESS:
             return {
                 ...state,
-                createProjectStatus: action.type,
-                projects: [...state.projects || [], action.data]
+                members: [...(state.members || []), { username: '', email: action.email }],
+                addMembersStatus: action.type
             };
-        case  CREATE_PROJECT_REQUEST:
-        case  CREATE_PROJECT_FAILURE:
+        case  ADD_USER_REQUEST:
+        case  ADD_USER_FAILURE:
             return {
-              ...state,
-              createProjectStatus: action.type  
+                ...state,
+                addMembersStatus: action.type
             };
-        default:
-            return state
+            
+        //  Remove Member
+        case REMOVE_USER_SUCCESS:
+            return {
+                ...state,
+                members: (state.members || []).filter(m => m.email != action.id),
+                removeMembersStatus: action.type
+            };
+        case  REMOVE_USER_REQUEST:
+        case  REMOVE_USER_FAILURE:
+            return {
+                ...state,
+                removeMembersStatus: action.type
+            };
+
+
     }
 };
 
