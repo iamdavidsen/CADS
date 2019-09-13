@@ -22,7 +22,7 @@ import {ChangeEvent} from "react";
 import {CREATE_DOCUMENT_SUCCESS, UPDATE_DOCUMENT_SUCCESS} from "../../constants";
 
 const docWrapperStyle: React.CSSProperties = {
-    flex: "1 1 700px"
+    flex: "1 1 700px",
 };
 
 interface IProps {
@@ -51,12 +51,6 @@ interface IState {
     showEditModal: boolean
     filter: string
 }
-
-const pageStyle: React.CSSProperties = {
-    width: "100%",
-    height: "100%",
-    overflow: "hidden"
-};
 
 class Project extends React.Component<IProps, IState> {
     constructor(props: IProps) {
@@ -186,9 +180,9 @@ class Project extends React.Component<IProps, IState> {
 
 
         return (
-            <div style={pageStyle}>
-                <Header onLogout={logout} onAddProject={this.onAddDocument}/>
-                <Box direction={"row"} wrap overflow={"auto"} height={"100%"}>
+            <Box width={"100%"} height={"100%"}>
+                <Header onLogout={logout} onAddProject={this.onAddDocument} />
+                <Box direction={"row"} wrap overflow={"auto"}>
                     <DocumentList search={filter} selectedId={document._id} onClickItem={this.onSelectDocument} onSearchChange={this.onSearchChange} project={project} documents={filteredDocs}/>
                     <Box style={docWrapperStyle} pad={"medium"}>
                         {document._id && <Document document={document} onEdit={this.onEditDocument} onDelete={this.onDeleteDocument}/>}
@@ -198,7 +192,7 @@ class Project extends React.Component<IProps, IState> {
                                      document={this.state.document} changeTitle={this.onChangeDocumentTitle}
                                      changeContent={this.onChangeDocumentContent} createDocument={this.onCreateDocument}
                                      saveDocument={this.onSaveDocument}/>
-            </div>
+            </Box>
         );
     }
 }

@@ -7,6 +7,7 @@ export const ProjectSchema = new mongoose.Schema({
     projectName: String,
     description: String,
     imgUrl: String,
+    color: String,
     creator: { type : Schema.Types.ObjectId, ref: USERS_COLLECTION },
     members: [{ type : Schema.Types.ObjectId, ref: USERS_COLLECTION }]
 });

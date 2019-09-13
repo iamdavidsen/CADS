@@ -11,6 +11,10 @@ interface IProps {
     onDelete: (id: string) => void
 }
 
+const boxStyle: React.CSSProperties = {
+    boxShadow: "0px 4px 10px 2px rgba(0,0,0,0.30)"
+}
+
 export const Document: React.FC<IProps> = ({document, onEdit, onDelete}) => {
     return (
 <Box>
@@ -24,7 +28,7 @@ export const Document: React.FC<IProps> = ({document, onEdit, onDelete}) => {
             <Button icon={<Trash/>} onClick={() => onDelete(document._id ||'')}/>
         </Box>
     </Box>
-    <Box border={"all"} round={"medium"} pad={"medium"}>
+    <Box border={"all"} round={"small"} pad={"medium"} style={boxStyle}>
             <ReactMarkdown source={document.content}
                            renderers={{code: CodeBlock}}
                            escapeHtml
