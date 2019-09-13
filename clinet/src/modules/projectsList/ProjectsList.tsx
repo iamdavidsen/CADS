@@ -33,12 +33,8 @@ interface IState {
 
 const projectListStyle: React.CSSProperties = {
     width: "100%",
-    minHeight: "100%"
-};
-
-const listStyle: React.CSSProperties = {
-    display: 'flex',
-    flexWrap: 'wrap'
+    height: "100%",
+    overflow: "hidden"
 };
 
 class ProjectList extends React.Component<IProps, IState> {
@@ -57,7 +53,7 @@ class ProjectList extends React.Component<IProps, IState> {
     componentWillMount(): void {
         this.props.actions.getProjects();
     }
-    
+
     componentDidUpdate(prevProps: Readonly<IProps>, prevState: Readonly<IState>, snapshot?: any): void {
         if (this.props.createProjectStatus == CREATE_PROJECT_SUCCESS && this.props.createProjectStatus != prevProps.createProjectStatus) {
             this.hideModal()
@@ -65,7 +61,13 @@ class ProjectList extends React.Component<IProps, IState> {
     }
 
     onAddProject = () => {
-        this.setState({showCreateProjectModal: true})
+        this.setState({
+            showCreateProjectModal: true,
+            createProjectDto: {
+                projectName: '',
+                description: ''
+            }
+        })
     };
 
     hideModal = () => {
@@ -101,7 +103,7 @@ class ProjectList extends React.Component<IProps, IState> {
         return (
             <div style={projectListStyle}>
                 <Header onLogout={logout} onAddProject={this.onAddProject}/>
-                <Box direction={"row"} style={listStyle} justify={"center"}>
+                <Box direction={"row"} wrap justify={"center"} overflow={"auto"}>
                     {projects && Array.isArray(projects) && projects.map(p => (<ProjectItem project={p}/>))}
                     <CreateProjectItem addProject={this.onAddProject}/>
                 </Box>

@@ -20,7 +20,8 @@ export const deleteProject = (projectId: string) => {
         Axios.delete(url, getHeaders())
             .then((response) => dispatch({
                 type: DELETE_PROJECT_SUCCESS,
-                data: response.data
+                data: response.data,
+                id: projectId
             }))
             .catch((error) => {
                 handleError(error, dispatch);

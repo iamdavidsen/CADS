@@ -21,7 +21,7 @@ export const addUser = (projectId: string, project: RemoveFromProjectDto) => {
         Axios.patch(url, project, getHeaders())
             .then((response) => dispatch({
                 type: REMOVE_USER_SUCCESS,
-                data: response.data
+                data: response.data,
             }))
             .catch((error) => {
                 handleError(error, dispatch);
