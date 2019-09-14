@@ -1,20 +1,20 @@
 import * as React from 'react'
-import {Dispatch} from "redux";
-import {connect} from "react-redux";
+import { Dispatch } from "redux";
+import { connect } from "react-redux";
 
-import {getProjects} from "../../actions/project/getProjects";
-import {ProjectItem} from "./components/projectItem";
-import {Header} from "../shared/components/Header";
-import {logout} from "../../actions/auth/logout";
-import {Box} from "grommet";
-import {CreateProjectModal} from "./components/createProjectModal";
-import {AppState} from "../../reducers";
-import {CreateProjectDto} from "../../../../Server/src/modules/projects/dto/createProject.dto";
-import {createProject} from "../../actions/project/createProject";
-import {ChangeEvent} from "react";
-import {CreateProjectItem} from "./components/createProjectItem";
-import {CREATE_PROJECT_SUCCESS} from "../../constants";
-import {IProject} from "../../models/IProject";
+import { getProjects } from "../../actions/project/getProjects";
+import { ProjectItem } from "./components/projectItem";
+import { Header } from "../shared/components/Header";
+import { logout } from "../../actions/auth/logout";
+import { Box, Heading } from "grommet";
+import { CreateProjectModal } from "./components/createProjectModal";
+import { AppState } from "../../reducers";
+import { CreateProjectDto } from "../../../../Server/src/modules/projects/dto/createProject.dto";
+import { createProject } from "../../actions/project/createProject";
+import { ChangeEvent } from "react";
+import { CreateProjectItem } from "./components/createProjectItem";
+import { CREATE_PROJECT_SUCCESS } from "../../constants";
+import { IProject } from "../../models/IProject";
 
 interface IProps {
     projects?: IProject[]
@@ -30,12 +30,6 @@ interface IState {
     showCreateProjectModal: boolean,
     createProjectDto: CreateProjectDto,
 }
-
-const projectListStyle: React.CSSProperties = {
-    width: "100%",
-    height: "100%",
-    overflow: "hidden"
-};
 
 class ProjectList extends React.Component<IProps, IState> {
     constructor(props: IProps) {
@@ -71,7 +65,7 @@ class ProjectList extends React.Component<IProps, IState> {
     };
 
     hideModal = () => {
-        this.setState({showCreateProjectModal: false})
+        this.setState({ showCreateProjectModal: false })
     };
 
     createProject = () => {
@@ -97,23 +91,24 @@ class ProjectList extends React.Component<IProps, IState> {
     };
 
     render(): React.ReactElement<any, string | React.JSXElementConstructor<any>> | string | number | {} | React.ReactNodeArray | React.ReactPortal | boolean | null | undefined {
-        const {projects, actions: {logout}} = this.props;
-        const {showCreateProjectModal, createProjectDto: {description, projectName}} = this.state;
+        const { projects, actions: { logout } } = this.props;
+        const { showCreateProjectModal, createProjectDto: { description, projectName } } = this.state;
 
         return (
-            <div style={projectListStyle}>
-                <Header onLogout={logout} onAddProject={this.onAddProject}/>
-                <Box direction={"row"} wrap justify={"center"} overflow={"auto"}>
-                    {projects && Array.isArray(projects) && projects.map(p => (<ProjectItem project={p}/>))}
-                    <CreateProjectItem addProject={this.onAddProject}/>
+                <Box width={"100%"} height={"100%"}>
+                    <Header onLogout={logout} onAddProject={this.onAddProject} />
+                    <Heading alignSelf={"center"} >Cloud API Documentation System Projects</Heading>
+                    <Box direction={"row"} wrap justify={"center"} overflow={"auto"} >
+                        {projects && Array.isArray(projects) && projects.map(p => (<ProjectItem project={p} />))}
+                        <CreateProjectItem addProject={this.onAddProject} />
+                    </Box>
+                    <CreateProjectModal shot={showCreateProjectModal} onHide={this.hideModal} description={description}
+                        title={projectName}
+                        changeDescription={this.changeProjectDesc}
+                        changeTitle={this.changeProjectTitle}
+                        createProject={this.createProject}
+                    />
                 </Box>
-                <CreateProjectModal shot={showCreateProjectModal} onHide={this.hideModal} description={description}
-                                    title={projectName}
-                                    changeDescription={this.changeProjectDesc}
-                                    changeTitle={this.changeProjectTitle}
-                                    createProject={this.createProject}
-                />
-            </div>
         );
     }
 }

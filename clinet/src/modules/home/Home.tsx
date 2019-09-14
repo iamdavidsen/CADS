@@ -3,7 +3,7 @@ import {Button, Heading} from "grommet";
 import {Link} from "react-router-dom";
 
 const backgroundStyle: React.CSSProperties = {
-    backgroundColor: "#657fff",
+    backgroundColor: "#1366FF",
     width: "100%",
     height: "100%",
     display: "flex",
@@ -22,6 +22,7 @@ const titleContainer: React.CSSProperties = {
 const titleStyle: React.CSSProperties = {
     flex: 3,
     fontSize: "4em",
+    color: "Antiquewhite"
 };
 
 const buttonContainerStyle: React.CSSProperties = {

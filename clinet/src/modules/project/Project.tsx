@@ -29,7 +29,7 @@ import {removeUser} from "../../actions/project/removeUser";
 import {UserModal} from "./components/userModal";
 
 const docWrapperStyle: React.CSSProperties = {
-    flex: "1 1 700px"
+    flex: "1 1 700px",
 };
 
 interface IProps {
@@ -64,12 +64,6 @@ interface IState {
     filter: string
     addUserEmail: string
 }
-
-const pageStyle: React.CSSProperties = {
-    width: "100%",
-    height: "100%",
-    overflow: "hidden"
-};
 
 class Project extends React.Component<IProps, IState> {
     constructor(props: IProps) {
@@ -236,9 +230,9 @@ class Project extends React.Component<IProps, IState> {
 
 
         return (
-            <div style={pageStyle}>
+            <Box width={"100%"} height={"100%"}>
                 <Header onLogout={logout} onAddProject={this.onAddDocument} onAddUser={this.onShowUserModal}/>
-                <Box direction={"row"} wrap overflow={"auto"} height={"100%"} >
+                <Box direction={"row"} wrap overflow={"auto"} >
                     <DocumentList search={filter} selectedId={document._id} onClickItem={this.onSelectDocument}
                                   onSearchChange={this.onSearchChange} project={project} documents={filteredDocs}/>
                     <Box style={docWrapperStyle} pad={"medium"}>
@@ -252,7 +246,7 @@ class Project extends React.Component<IProps, IState> {
                                      saveDocument={this.onSaveDocument}/>
                 <UserModal show={showUserModal} onHide={this.onHideUserModal} members={members || []}
                            userEmail={addUserEmail} changeAddUserEmail={this.onEmailChange} addUser={this.onAddUser} removeUser={this.onRemoveUser}/>
-            </div>
+            </Box>
         );
     }
 }

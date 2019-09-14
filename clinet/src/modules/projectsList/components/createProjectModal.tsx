@@ -57,7 +57,7 @@ export const CreateProjectModal: React.FC<IProps> = ({
                 <TextInput value={description || ''} onChange={changeDescription} />
 
                 <Box direction={"row"} justify={"end"} style={boxStyle}>
-                    <Button onClick={onHide} margin="0 15px 0 0" label={"Cancel"} plain color={"secondary"} />
+                    <Button onClick={onHide} margin="0 15px 0 0" label={"Cancel"} plain color={"secondaryDark"} />
                     <Button onClick={createProject} label={"Create"} color={"primary"} />
                 </Box>
             </Box>
