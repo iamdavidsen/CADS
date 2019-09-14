@@ -16,7 +16,12 @@ import {
     ADD_USER_SUCCESS,
     REMOVE_USER_SUCCESS,
     REMOVE_USER_REQUEST,
-    REMOVE_USER_FAILURE
+    REMOVE_USER_FAILURE,
+    UPDATE_PROJECT_SUCCESS,
+    UPDATE_PROJECT_REQUEST,
+    UPDATE_PROJECT_FAILURE,
+    DELETE_PROJECT_FAILURE,
+    DELETE_PROJECT_SUCCESS, DELETE_PROJECT_REQUEST
 } from '../constants';
 
 import {IProject} from "../models/IProject";
@@ -29,6 +34,8 @@ interface IProjectState {
     getProjectStatus: string
     getProjectsStatus: string
     createProjectStatus: string
+    updateProjectStatus: string
+    deleteProjectStatus: string
     getMembersStatus: string
     addMembersStatus: string
     removeMembersStatus: string
@@ -39,6 +46,8 @@ const initialState: IProjectState = {
     getProjectsStatus: '',
     getMembersStatus: '',
     createProjectStatus: '',
+    updateProjectStatus: '',
+    deleteProjectStatus: '',
     addMembersStatus: '',
     removeMembersStatus: ''
 };
@@ -87,8 +96,35 @@ export const project = (state = initialState, action: any): IProjectState => {
               ...state,
               createProjectStatus: action.type  
             };
-        default:
-            return state
+
+        //  UPDATE PROJECT
+        case UPDATE_PROJECT_SUCCESS:
+            return {
+                ...state,
+                updateProjectStatus: action.type,
+                projects: (state.projects || []).map(p => p._id == action.id ? action.data : p)
+            };
+        case  UPDATE_PROJECT_REQUEST:
+        case  UPDATE_PROJECT_FAILURE:
+            return {
+                ...state,
+                updateProjectStatus: action.type
+            };
+
+        //  DELETE PROJECT
+        case DELETE_PROJECT_SUCCESS:
+            return {
+                ...state,
+                deleteProjectStatus: action.type,
+                projects: (state.projects || []).filter(p => p._id != action.id)
+            };
+        case  DELETE_PROJECT_REQUEST:
+        case  DELETE_PROJECT_FAILURE:
+            return {
+                ...state,
+                deleteProjectStatus: action.type
+            };
+            
         
         //  GET Members
         case GET_MEMBERS_SUCCESS:
@@ -133,6 +169,9 @@ export const project = (state = initialState, action: any): IProjectState => {
                 ...state,
                 removeMembersStatus: action.type
             };
+            
+        default:
+            return state
 
 
     }

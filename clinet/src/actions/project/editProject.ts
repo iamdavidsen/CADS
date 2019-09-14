@@ -21,7 +21,8 @@ export const editProject = (projectId: string, project: EditProjectDto) => {
         Axios.patch(url, project, getHeaders())
             .then((response) => dispatch({
                 type: UPDATE_PROJECT_SUCCESS,
-                data: response.data
+                data: response.data,
+                id: projectId
             }))
             .catch((error) => {
                 handleError(error, dispatch);
