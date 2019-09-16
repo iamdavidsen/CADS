@@ -25,7 +25,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/clinet/src/actions/document/getDocuments.ts" />
         <option value="$PROJECT_DIR$/clinet/src/actions/document/editDocument.ts" />
         <option value="$PROJECT_DIR$/clinet/src/constants.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/dto/removeFromProject.dto.ts" />
@@ -76,6 +75,7 @@
         <option value="$PROJECT_DIR$/Server/src/modules/projects/projects.controller.ts" />
         <option value="$PROJECT_DIR$/clinet/src/env.ts" />
         <option value="$PROJECT_DIR$/Server/package.json" />
+        <option value="$PROJECT_DIR$/Server/src/main.ts" />
       </list>
     </option>
   </component>
