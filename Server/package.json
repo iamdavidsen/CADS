@@ -56,8 +56,7 @@
     "tsconfig-paths": "3.8.0",
     "tslint": "5.16.0"
   },
-  "devDependencies": {
-  },
+  "devDependencies": {},
   "jest": {
     "moduleFileExtensions": [
       "js",

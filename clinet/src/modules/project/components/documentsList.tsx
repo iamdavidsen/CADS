@@ -6,11 +6,11 @@ import {DocumentItem} from "./documentItem";
 import {theme} from "../../../theme"
 
 const listStyle: React.CSSProperties = {
-    flex: "0 1 300px"
+    flex: "0 1 350px"
 };
 
 const boxStyle: React.CSSProperties = {
-    background: theme.global.colors.secondaryLight,
+    background: "#d8d8d8",
     marginTop: "10px",
     boxShadow: "2.5px 2.5px 8px 0px rgba(0,0,0,0.30)",
     borderRadius: "5px",
