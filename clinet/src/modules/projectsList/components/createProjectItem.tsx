@@ -20,7 +20,7 @@ const itemStyle: React.CSSProperties = {
     alignItems: 'center',
     wordBreak: "break-word",
     overflow: "hidden",
-    margin: "16px",
+    margin: "54px 6px 16px",
     cursor: "pointer",
     boxShadow: "2.5px 2.5px 8px 0px rgba(0,0,0,0.30)"
 };
