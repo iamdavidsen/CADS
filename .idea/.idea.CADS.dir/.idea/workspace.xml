@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="545d72a8-d72b-465a-a8d5-8f723058666a" name="Default Changelist" comment="" />
+    <list default="true" id="545d72a8-d72b-465a-a8d5-8f723058666a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/clinet/public/netlify.toml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +27,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/clinet/src/actions/document/editDocument.ts" />
         <option value="$PROJECT_DIR$/clinet/src/constants.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/dto/removeFromProject.dto.ts" />
         <option value="$PROJECT_DIR$/clinet/src/models/IMember.ts" />
@@ -76,6 +77,7 @@
         <option value="$PROJECT_DIR$/clinet/src/env.ts" />
         <option value="$PROJECT_DIR$/Server/package.json" />
         <option value="$PROJECT_DIR$/Server/src/main.ts" />
+        <option value="$PROJECT_DIR$/clinet/public/netlify.toml" />
       </list>
     </option>
   </component>
@@ -356,8 +358,8 @@
     <state x="117" y="50" key="SettingsEditor/2736.1824" />
     <state x="344" y="201" key="run.anything.popup" />
     <state x="344" y="201" key="run.anything.popup/2736.1824" />
-    <state x="348" y="185" width="672" height="678" key="search.everywhere.popup" />
-    <state x="348" y="185" width="672" height="678" key="search.everywhere.popup/2736.1824" />
+    <state x="349" y="186" width="672" height="678" key="search.everywhere.popup" />
+    <state x="349" y="186" width="672" height="678" key="search.everywhere.popup/2736.1824" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
