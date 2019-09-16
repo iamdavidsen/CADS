@@ -17,20 +17,21 @@ const boxStyle: React.CSSProperties = {
 
 export const Document: React.FC<IProps> = ({ document, onEdit, onDelete }) => {
     return (
-<Box>
-    <Box direction={"row"} justify={"between"}>
+        <Box>
+            <Box direction={"row"} justify={"between"}>
 
-        <Heading>{document.documentTitle}</Heading>
-        <Box direction={"row"}>
-            {onEdit && <Button icon={<Edit/>} onClick={() => onEdit(document)} />}
-            {onDelete && <Button icon={<Trash/>} onClick={() => onDelete(document._id ||'')}/>}
-        </Box>
-    </Box>
-    <Box border={"all"} round={"small"} pad={"medium"} style={boxStyle}>
-            <ReactMarkdown source={document.content}
-                           renderers={{code: CodeBlock}}
-                           escapeHtml
-            />
+                <Heading>{document.documentTitle}</Heading>
+                <Box direction={"row"}>
+                    {onEdit && <Button icon={<Edit />} onClick={() => onEdit(document)} />}
+                    {onDelete && <Button icon={<Trash />} onClick={() => onDelete(document._id || '')} />}
+                </Box>
+            </Box>
+            <Box border={"all"} round={"small"} pad={"medium"} style={boxStyle}>
+                <ReactMarkdown source={document.content}
+                    renderers={{ code: CodeBlock }}
+                    escapeHtml
+                />
+            </Box>
         </Box>
     )
 };
