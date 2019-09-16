@@ -17,7 +17,7 @@ const boxStyle: React.CSSProperties = {
     padding: "5px 10px"
 };
 
-const boxShadow: React.CSSProperties = {
+const BoxShadowStyle: React.CSSProperties = {
     boxShadow: "2.5px 2.5px 8px 0px rgba(0,0,0,0.30)"
 }
 
@@ -42,7 +42,7 @@ export const DocumentList: React.FC<IProps> = ({search, project, documents, sele
             <Heading level={2} >{project && project.projectName}</Heading>
             
             <Heading level={4} style={textStyle} >Documents</Heading>
-            <TextInput placeholder={"Search"} onChange={onSearchChange} value={search} style={boxShadow}/>
+            <TextInput placeholder={"Search"} onChange={onSearchChange} value={search} style={BoxShadowStyle}/>
             <Box style={boxStyle}>
                 {documents && documents.map(d => <DocumentItem selected={d._id == selectedId} onClick={onClickItem} document={d}/>)}
             </Box>

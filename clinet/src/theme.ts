@@ -4,9 +4,9 @@ export const theme = {
             brand: "#304ffe",
             brandLight: "#7a7cff",
             brandDark: "#0026ca",
-            secondary: "#e040fb",
-            secondaryLight: "#ff79ff",
-            secondaryDark: "#aa00c7",
+            secondary: "#d50000",
+            secondaryLight: "#ff5131",
+            secondaryDark: "#9b0000",
 
         }
     }

@@ -22,7 +22,8 @@ const headingStyle: React.CSSProperties = {
 
 const boxStyle: React.CSSProperties = {
     borderRadius: "6px",
-    padding: "10px 5px",
+    padding: "5px 10px",
+    marginRight: "12px",
     width: "300px",
     height: "125px",
     wordBreak: "break-word",
@@ -44,7 +45,7 @@ export const ProjectItem: React.FC<IProps> = ({ project, onDeleteProject, onEdit
                 <Heading style={headingStyle}>{project.projectName}</Heading>
                 <Box justify={"end"} direction={"row"}>
                     <Button icon={<Edit />} onClick={() => onEditProject(project)} />
-                    <Button icon={<Trash/>} onClick={() => onDeleteProject(project) }/>
+                    <Button icon={<Trash/>} onClick={() => onDeleteProject(project) } />
                 </Box>
             </Box>
             <NavLink to={`/project/${project._id}`} style={linkStyle} >
