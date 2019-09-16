@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545d72a8-d72b-465a-a8d5-8f723058666a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/clinet/src/actions/document/getPublicDocuments.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clinet/src/actions/project/getPublicProject.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clinet/src/modules/project/PublicProject.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/modules/project/components/document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/project/components/document.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/modules/projectsList/components/createProjectModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/projectsList/components/createProjectModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/modules/routing/Routing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/routing/Routing.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinet/src/env.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/env.ts" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,7 +28,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/clinet/src/reducers/index.ts" />
         <option value="$PROJECT_DIR$/clinet/src/models/IDocument.ts" />
         <option value="$PROJECT_DIR$/clinet/src/actions/document/getDocuments.ts" />
         <option value="$PROJECT_DIR$/clinet/src/actions/document/editDocument.ts" />
@@ -86,6 +78,7 @@
         <option value="$PROJECT_DIR$/clinet/src/actions/document/getPublicDocuments.ts" />
         <option value="$PROJECT_DIR$/clinet/src/actions/project/getPublicProject.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/projects.controller.ts" />
+        <option value="$PROJECT_DIR$/clinet/src/env.ts" />
       </list>
     </option>
   </component>
