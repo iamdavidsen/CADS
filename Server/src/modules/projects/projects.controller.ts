@@ -1,7 +1,7 @@
 import {Controller, Get, Request, Post, Body, Param, UseGuards, Patch, Delete} from '@nestjs/common';
-import { CreateProjectDto } from './dto/createProject.dto';
-import { EditProjectDto } from './dto/editProject.dto';
-import { Project } from './interfaces/project.interface';
+import {CreateProjectDto} from './dto/createProject.dto';
+import {EditProjectDto} from './dto/editProject.dto';
+import {Project} from './interfaces/project.interface';
 import {ProjectsService} from './projects.service';
 import {AuthGuard} from '@nestjs/passport';
 import {AddToProjectDto} from './dto/addToProject.dto';
@@ -9,7 +9,8 @@ import {RemoveFromProjectDto} from './dto/removeFromProject.dto';
 
 @Controller('projects')
 export class UsersController {
-    constructor(private projectsProvider: ProjectsService) {}
+    constructor(private projectsProvider: ProjectsService) {
+    }
 
     @UseGuards(AuthGuard('jwt'))
     @Get()
@@ -17,11 +18,16 @@ export class UsersController {
         return this.projectsProvider.findAll(req.user.userId);
     }
 
+    @Get('/public/:id')
+    async getPublicProject(@Request() req, @Param('id') projectId: string) {
+        return this.projectsProvider.findByIdPublic(projectId);
+    }
+
     @UseGuards(AuthGuard('jwt'))
-     @Get(':id')
+    @Get(':id')
     async getProject(@Request() req, @Param('id') projectId: string) {
         return this.projectsProvider.findById(req.user.userId, projectId);
-     }
+    }
 
     @UseGuards(AuthGuard('jwt'))
     @Post()

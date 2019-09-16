@@ -1,16 +1,18 @@
 import * as React from 'react'
 
-import { Box, Button, Heading, Layer, Text, TextInput } from "grommet";
+import {Box, Button, CheckBox, Heading, Layer, Text, TextInput} from "grommet";
 import { ChangeEvent } from "react";
 
 interface IProps {
     shot: boolean
     onHide: () => void
-    edit: boolean
+    _id?: string
     title?: string
     description?: string
+    isPublic?: boolean
     changeTitle: (e: ChangeEvent<HTMLInputElement>) => void
     changeDescription: (e: ChangeEvent<HTMLInputElement>) => void
+    changePublic: (e: ChangeEvent<any>) => void
     createProject: () => void
 }
 
@@ -30,11 +32,13 @@ export const CreateProjectModal: React.FC<IProps> = ({
     shot,
     onHide,
     title,
-    edit,
+    _id,
     description,
+    isPublic,
     changeTitle,
     changeDescription,
-    createProject
+    createProject,
+    changePublic
 }) => {
     if (!shot) return null;
 
@@ -51,7 +55,7 @@ export const CreateProjectModal: React.FC<IProps> = ({
                 pad="large"
             >
 
-                <Heading>{edit ? "Edit Project" : "Create Project" }</Heading>
+                <Heading>{_id ? "Edit Project" : "Create Project" }</Heading>
 
                 <Heading style={headingStyle}>Title</Heading>
                 <TextInput value={title} onChange={changeTitle} />
@@ -59,9 +63,23 @@ export const CreateProjectModal: React.FC<IProps> = ({
                 <Heading style={headingStyle}>Description</Heading>
                 <TextInput value={description || ''} onChange={changeDescription} />
 
+                <Heading style={headingStyle}>Public</Heading>
+                <CheckBox checked={isPublic} onChange={changePublic} />
+                
+                {
+                    isPublic && _id && (
+                        <Box>
+                            <Heading style={headingStyle}>Share link</Heading>
+                            <Text>
+                                {`${window.location.protocol}//${window.location.host}/public/project/${_id}` }
+                            </Text>
+                        </Box>
+                    )
+                }
+
                 <Box direction={"row"} justify={"end"} style={boxStyle}>
                     <Button onClick={onHide} margin="0 15px 0 0" label={"Cancel"} plain color={"secondaryDark"} />
-                    <Button onClick={createProject} label={ edit ? "Save" : "Create"} color={"primary"} />
+                    <Button onClick={createProject} label={ _id ? "Save" : "Create"} color={"primary"} />
                 </Box>
             </Box>
         </Layer>

@@ -50,7 +50,8 @@ class ProjectList extends React.Component<IProps, IState> {
             showDeleteProjectModal: false,
             createProjectDto: {
                 projectName: '',
-                description: ''
+                description: '',
+                public: false
             }
         }
     }
@@ -96,7 +97,7 @@ class ProjectList extends React.Component<IProps, IState> {
 
         if (!project || !project._id) return;
 
-        this.props.actions.editProject(project._id, project)
+        this.props.actions.editProject(project._id, project as any)
     };
 
     deleteProject = () => {
@@ -125,13 +126,22 @@ class ProjectList extends React.Component<IProps, IState> {
         })
     };
 
+    changeProjectPublic = (e: ChangeEvent<any>) => {
+        this.setState({
+            createProjectDto: {
+                ...this.state.createProjectDto,
+                public: e.target.checked
+            }
+        })
+    };
+
     onOpenEditModal = (project: IProject) => {
         this.setState({createProjectDto: project, showCreateProjectModal: true})
     };
 
     onHideDeleteModal = () => {
         this.setState({showDeleteProjectModal: false})
-    }
+    };
 
     onOpenDeleteModal = (project: IProject) => {
         this.setState({createProjectDto: project, showDeleteProjectModal: true})
@@ -151,12 +161,14 @@ class ProjectList extends React.Component<IProps, IState> {
                                      project={p}/>))}
                     <CreateProjectItem addProject={this.onAddProject}/>
                 </Box>
-                <CreateProjectModal edit={Boolean(_id)} shot={showCreateProjectModal} onHide={this.hideModal}
+                <CreateProjectModal _id={_id} shot={showCreateProjectModal} onHide={this.hideModal}
                                     description={description}
                                     title={projectName}
                                     changeDescription={this.changeProjectDesc}
                                     changeTitle={this.changeProjectTitle}
                                     createProject={Boolean(_id) ? this.saveProject : this.createProject}
+                                    changePublic={this.changeProjectPublic}
+                                    isPublic={this.state.createProjectDto.public}
                 />
                 <DialogModal show={showDeleteProjectModal} title={"Delete Project"}
                              content={`Are you sure you want to delete ${projectName}?`} acceptText={"Delete"}

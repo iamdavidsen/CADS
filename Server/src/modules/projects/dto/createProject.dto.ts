@@ -1,5 +1,5 @@
 export class CreateProjectDto {
-    projectName: string;
+    projectName?: string;
     description?: string;
-    imgUrl?: string;
+    public?: boolean;
 }

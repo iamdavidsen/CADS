@@ -9,6 +9,11 @@ import { EditDocumentDto } from './dto/editDocument.dto';
 @Controller('documents')
 export class DocumentsController {
     constructor(private documentsService: DocumentsService) {}
+    
+    @Get('public/project/:id')
+    async getDocumentsInProjectPublic(@Request() req, @Param('id') projectId: string) {
+        return this.documentsService.findAllByProjectIdPublic(projectId);
+    }
 
     @UseGuards(AuthGuard('jwt'))
      @Get('project/:id')

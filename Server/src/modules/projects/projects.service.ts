@@ -15,6 +15,14 @@ export class ProjectsService {
         return this.projectsProvider.create(userId, createProjectDto);
     }
 
+    async findByIdPublic(projectId: string): Promise<Project> {
+        const res = await this.projectsProvider.findById(projectId);
+
+        if (!res.public) { throw new BadRequestException(); }
+
+        return res;
+    }
+
     async findById(userId: string, projectId: string): Promise<Project> {
         const res = await this.projectsProvider.findById(projectId);
 

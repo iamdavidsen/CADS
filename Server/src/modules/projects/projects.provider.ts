@@ -10,6 +10,7 @@ import {PROJECTS_COLLECTION} from '../../constants';
 import * as mongoose from 'mongoose';
 import {EditProjectDto} from './dto/editProject.dto';
 
+// tslint:disable-next-line:no-var-requires
 const randomColor = require('randomcolor');
 
 @Injectable()
@@ -18,7 +19,11 @@ export class ProjectsProvider {
     }
 
     async create(userId: string, createProjectDto: CreateProjectDto): Promise<Project> {
-        const createdProject = new this.projectModel({...createProjectDto, creator: mongoose.Types.ObjectId(userId), color: randomColor({luminosity: 'bright'})});
+        const createdProject = new this.projectModel({
+            ...createProjectDto,
+            creator: mongoose.Types.ObjectId(userId),
+            color: randomColor({luminosity: 'bright'}),
+        });
         return await createdProject.save();
     }
 
@@ -28,25 +33,27 @@ export class ProjectsProvider {
 
     async findAll(userId: string): Promise<Project[]> {
         return await this.projectModel.find({
-            $or: [
-                {
-                    creator: mongoose.Types.ObjectId(userId),
-                },
-                {
-                    members: {
-                        $all: [mongoose.Types.ObjectId(userId)],
+                $or: [
+                    {
+                        creator: mongoose.Types.ObjectId(userId),
                     },
-                },
-            ]},
+                    {
+                        members: {
+                            $all: [mongoose.Types.ObjectId(userId)],
+                        },
+                    },
+                ]
+            },
         ).exec();
     }
 
     async edit(id: string, project: EditProjectDto): Promise<Project | undefined> {
-        return this.projectModel.findByIdAndUpdate(id, {
+        await this.projectModel.findByIdAndUpdate(id, {
             projectName: project.projectName,
             description: project.description,
-            imgUrl: project.imgUrl,
+            public: project.public,
         } as Project);
+        return this.projectModel.findById(id);
     }
 
     async addToProject(id: string, idToAdd: string): Promise<Project | undefined> {

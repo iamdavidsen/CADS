@@ -43,6 +43,14 @@ export class DocumentsService {
         return this.documentsProvider.deleteDocument(documentId);
     }
 
+    async findAllByProjectIdPublic(projectId: string): Promise<Document[]> {
+        const project = await this.projectsProvider.findById(projectId);
+
+        if (!project.public) { throw new BadRequestException(); }
+
+        return this.documentsProvider.findAllByProjectId(projectId);
+    }
+
     async findAllByProjectId(userId: string, projectId: string): Promise<Document[]> {
         const project = await this.projectsProvider.findById(projectId);
 

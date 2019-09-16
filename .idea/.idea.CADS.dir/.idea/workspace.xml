@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="545d72a8-d72b-465a-a8d5-8f723058666a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/clinet/src/modules/shared/Utils/IWithId.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/clinet/src/modules/shared/components/DialogModal.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinet/src/actions/document/getPublicDocuments.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinet/src/actions/project/getPublicProject.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/clinet/src/modules/project/PublicProject.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CADS.dir/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/actions/project/editProject.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/actions/project/editProject.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinet/src/modules/project/components/document.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/project/components/document.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/clinet/src/modules/projectsList/components/createProjectModal.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/projectsList/components/createProjectModal.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/modules/projectsList/components/projectItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/projectsList/components/projectItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/modules/shared/containers/LoggedInUser.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/shared/containers/LoggedInUser.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clinet/src/reducers/projectsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/reducers/projectsReducer.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clinet/src/modules/routing/Routing.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/clinet/src/modules/routing/Routing.tsx" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -36,12 +35,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/clinet/src/actions/auth/login.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/components/createProjectModal.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/actions/project/getProjects.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/components/createProjectItem.tsx" />
-        <option value="$PROJECT_DIR$/clinet/src/models/IProject.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/models/IUser.ts" />
         <option value="$PROJECT_DIR$/clinet/src/reducers/index.ts" />
         <option value="$PROJECT_DIR$/clinet/src/models/IDocument.ts" />
         <option value="$PROJECT_DIR$/clinet/src/actions/document/getDocuments.ts" />
@@ -58,7 +51,6 @@
         <option value="$PROJECT_DIR$/clinet/src/modules/project/components/documentsList.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/modules/project/components/codeBlock.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/reducers/documentsReducer.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/modules/project/components/document.tsx" />
         <option value="$PROJECT_DIR$/Server/src/app.module.ts" />
         <option value="$PROJECT_DIR$/Server/src/app.service.ts" />
         <option value="$PROJECT_DIR$/clinet/src/modules/project/components/createDocumentModal.tsx" />
@@ -69,24 +61,31 @@
         <option value="$PROJECT_DIR$/clinet/src/actions/project/addUser.ts" />
         <option value="$PROJECT_DIR$/clinet/src/modules/project/components/userModal.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/modules/shared/components/Header.tsx" />
-        <option value="$PROJECT_DIR$/clinet/src/modules/project/Project.tsx" />
-        <option value="$PROJECT_DIR$/Server/src/modules/projects/dto/createProject.dto.ts" />
         <option value="$PROJECT_DIR$/clinet/src/modules/shared/Utils/IWithId.ts" />
         <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/components/projectItem.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/actions/project/editProject.ts" />
         <option value="$PROJECT_DIR$/clinet/src/modules/shared/containers/LoggedInUser.tsx" />
-        <option value="$PROJECT_DIR$/Server/src/modules/projects/dto/editProject.dto.ts" />
-        <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/components/createProjectModal.tsx" />
-        <option value="$PROJECT_DIR$/Server/src/modules/projects/projects.provider.ts" />
-        <option value="$PROJECT_DIR$/Server/src/modules/projects/interfaces/project.interface.ts" />
-        <option value="$PROJECT_DIR$/Server/src/modules/projects/schemas/project.schema.ts" />
         <option value="$PROJECT_DIR$/clinet/src/modules/shared/components/DialogModal.tsx" />
-        <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" />
         <option value="$PROJECT_DIR$/clinet/src/reducers/projectsReducer.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/documents/documents.provider.ts" />
-        <option value="$PROJECT_DIR$/Server/src/modules/projects/projects.controller.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/projects.module.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/projects/schemas/project.schema.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/projects/interfaces/project.interface.ts" />
         <option value="$PROJECT_DIR$/Server/src/modules/projects/projects.service.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/documents/documents.service.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/projects/dto/editProject.dto.ts" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/project/components/document.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/project/PublicProject.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/routing/Routing.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/project/Project.tsx" />
+        <option value="$PROJECT_DIR$/Server/src/modules/projects/dto/createProject.dto.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/documents/documents.controller.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/projects/projects.provider.ts" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/ProjectsList.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/modules/projectsList/components/createProjectModal.tsx" />
+        <option value="$PROJECT_DIR$/clinet/src/actions/document/getPublicDocuments.ts" />
+        <option value="$PROJECT_DIR$/clinet/src/actions/project/getPublicProject.ts" />
+        <option value="$PROJECT_DIR$/Server/src/modules/projects/projects.controller.ts" />
       </list>
     </option>
   </component>
@@ -367,8 +366,8 @@
     <state x="117" y="50" key="SettingsEditor/2736.1824" />
     <state x="344" y="201" key="run.anything.popup" />
     <state x="344" y="201" key="run.anything.popup/2736.1824" />
-    <state x="346" y="183" width="672" height="678" key="search.everywhere.popup" />
-    <state x="346" y="183" width="672" height="678" key="search.everywhere.popup/2736.1824" />
+    <state x="348" y="185" width="672" height="678" key="search.everywhere.popup" />
+    <state x="348" y="185" width="672" height="678" key="search.everywhere.popup/2736.1824" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
