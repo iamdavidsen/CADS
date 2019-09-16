@@ -4,7 +4,6 @@ import {connect} from "react-redux";
 import {Dispatch} from "redux";
 import {logout} from "../../../actions/auth/logout"; 
 
-import {REGISTER_USER_FAILURE, REGISTER_USER_REQUEST, REGISTER_USER_SUCCESS} from '../../../constants'
 import {Link} from "react-router-dom";
 
 interface IProps {

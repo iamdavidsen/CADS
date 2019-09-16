@@ -6,7 +6,8 @@ import { ChangeEvent } from "react";
 interface IProps {
     shot: boolean
     onHide: () => void
-    title: string
+    edit: boolean
+    title?: string
     description?: string
     changeTitle: (e: ChangeEvent<HTMLInputElement>) => void
     changeDescription: (e: ChangeEvent<HTMLInputElement>) => void
@@ -18,16 +19,18 @@ const headingStyle: React.CSSProperties = {
     margin: "15px 0 0 0",
     fontSize: "20px",
     lineHeight: "30px"
-}
+};
+
 const boxStyle: React.CSSProperties = {
     alignItems: "right",
     padding: "40px 0 0 0"
-}
+};
 
 export const CreateProjectModal: React.FC<IProps> = ({
     shot,
     onHide,
     title,
+    edit,
     description,
     changeTitle,
     changeDescription,
@@ -48,7 +51,7 @@ export const CreateProjectModal: React.FC<IProps> = ({
                 pad="large"
             >
 
-                <Heading>Create Project </Heading>
+                <Heading>{edit ? "Edit Project" : "Create Project" }</Heading>
 
                 <Heading style={headingStyle}>Title</Heading>
                 <TextInput value={title} onChange={changeTitle} />
@@ -57,8 +60,8 @@ export const CreateProjectModal: React.FC<IProps> = ({
                 <TextInput value={description || ''} onChange={changeDescription} />
 
                 <Box direction={"row"} justify={"end"} style={boxStyle}>
-                    <Button onClick={onHide} margin="0 15px 0 0" label={"Cancel"} plain color={"secondary"} />
-                    <Button onClick={createProject} label={"Create"} color={"primary"} />
+                    <Button onClick={onHide} margin="0 15px 0 0" label={"Cancel"} plain color={"secondaryDark"} />
+                    <Button onClick={createProject} label={ edit ? "Save" : "Create"} color={"primary"} />
                 </Box>
             </Box>
         </Layer>

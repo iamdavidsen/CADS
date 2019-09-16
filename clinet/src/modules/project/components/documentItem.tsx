@@ -15,7 +15,7 @@ interface IProps {
 export const DocumentItem: React.FC<IProps> = ({document, selected, onClick}) => {
     return (
         <Box style={itemStyle} onClick={() => onClick(document)}>
-            <Text color={selected ? "#0077F0": "#000000"}>
+            <Text color={selected ? "#0000FF": "#000000"}>
                 {document.documentTitle || 'Unnamed'}
             </Text>
         </Box>

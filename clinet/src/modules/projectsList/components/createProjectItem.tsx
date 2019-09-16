@@ -1,6 +1,7 @@
 import * as React from 'react'
 
 import { Box, Heading, Text } from "grommet";
+import { theme } from '../../../theme';
 
 const textStyle: React.CSSProperties = {
     color: "black",
@@ -9,7 +10,7 @@ const textStyle: React.CSSProperties = {
 };
 
 const itemStyle: React.CSSProperties = {
-    background: "#EFEEFE",
+    background: "#FFFFFF",
     borderRadius: "6px",
     padding: "10px 5px",
     width: "300px",
@@ -20,7 +21,8 @@ const itemStyle: React.CSSProperties = {
     wordBreak: "break-word",
     overflow: "hidden",
     margin: "16px",
-    cursor: "pointer"
+    cursor: "pointer",
+    boxShadow: "2.5px 2.5px 8px 0px rgba(0,0,0,0.30)"
 };
 
 interface IProps {

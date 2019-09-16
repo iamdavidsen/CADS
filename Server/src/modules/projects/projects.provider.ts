@@ -10,13 +10,15 @@ import {PROJECTS_COLLECTION} from '../../constants';
 import * as mongoose from 'mongoose';
 import {EditProjectDto} from './dto/editProject.dto';
 
+const randomColor = require('randomcolor');
+
 @Injectable()
 export class ProjectsProvider {
     constructor(@InjectModel(PROJECTS_COLLECTION) private readonly projectModel: Model<Project>) {
     }
 
     async create(userId: string, createProjectDto: CreateProjectDto): Promise<Project> {
-        const createdProject = new this.projectModel({...createProjectDto, creator: mongoose.Types.ObjectId(userId)});
+        const createdProject = new this.projectModel({...createProjectDto, creator: mongoose.Types.ObjectId(userId), color: randomColor({luminosity: 'bright'})});
         return await createdProject.save();
     }
 
