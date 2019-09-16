@@ -82,7 +82,7 @@ class Login extends Component<IProps, IState> {
                             <TextInput type={"Password"} required name={"password"} onChange={this.onChange} 
                             value={password} />
                         </FormField>
-                        <Button type="submit" primary label="Submit" />
+                        <Button type="submit" primary label="Login" />
                     </Form>
                         <Link to={"/register"}><Button plain label={"Sign up"} color={theme.global.colors.brandDark} 
                         margin="5px 0 0 24px" /></Link>

@@ -92,13 +92,13 @@ class Register extends Component<IProps, IState> {
                         <FormField label="Username">
                             <TextInput required name={"username"} onChange={this.onChange} value={username} />
                         </FormField>
-                        <FormField required label="Email">
-                            <TextInput type={"email"} name={"email"} onChange={this.onChange} value={email} />
+                        <FormField label="Email">
+                            <TextInput required type={"email"} name={"email"} onChange={this.onChange} value={email} />
                         </FormField>
                         <FormField label="Password">
                             <TextInput type={"password"} required name={"password"} onChange={this.onChange} value={password} />
                         </FormField>
-                        <Button type="submit" primary label="Submit" />
+                        <Button type="submit" primary label="Register" />
                     </Form>
                     <Link to={"/login"}><Button plain label={"Login"} color={theme.global.colors.brandDark} margin="5px 0 0 24px" /></Link>
                 </Box>

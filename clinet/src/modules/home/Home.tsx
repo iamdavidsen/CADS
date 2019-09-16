@@ -26,8 +26,8 @@ const titleContainer: React.CSSProperties = {
 
 const titleStyle: React.CSSProperties = {
     flex: 3,
-    fontSize: "4em",
-    color: theme.global.colors.brandDark
+    color: theme.global.colors.brandDark,
+    // wordBreak: "break-word"
 };
 
 const buttonContainerStyle: React.CSSProperties = {
@@ -43,7 +43,7 @@ const HomePage: React.FunctionComponent = () => {
     return (
         <div style={backgroundStyle}>
             <div style={titleContainer}>
-                <Heading style={titleStyle}>
+                <Heading style={titleStyle} size={"3em"}>
                     Cloud API Documentation System
                 </Heading>
             </div>

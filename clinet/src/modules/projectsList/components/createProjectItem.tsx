@@ -20,7 +20,7 @@ const itemStyle: React.CSSProperties = {
     alignItems: 'center',
     wordBreak: "break-word",
     overflow: "hidden",
-    margin: "54px 6px 16px",
+    margin: "0 16px 0 0",
     cursor: "pointer",
     boxShadow: "2.5px 2.5px 8px 0px rgba(0,0,0,0.30)"
 };
@@ -32,8 +32,10 @@ interface IProps {
 
 export const CreateProjectItem: React.FC<IProps> = ({ addProject }) => {
     return (
-        <Box style={itemStyle} onClick={addProject}>
-            <text style={textStyle}>Create new Project</text>
+        <Box margin={"small"} height="173px" width="312px" pad={"48px 0 0 0"}>
+            <Box style={itemStyle} onClick={addProject}>
+                <text style={textStyle}>Create new Project</text>
+            </Box>
         </Box>
     )
 };

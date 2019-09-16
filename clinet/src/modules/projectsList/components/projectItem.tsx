@@ -39,7 +39,7 @@ interface IProps {
 
 export const ProjectItem: React.FC<IProps> = ({ project, onDeleteProject, onEditProject }) => {
     return (
-        <Box margin={"xsmall"}>
+        <Box margin={"small"}>
 
             <Box direction={"row"} justify={"between"}>
                 <Heading style={headingStyle}>{project.projectName}</Heading>
