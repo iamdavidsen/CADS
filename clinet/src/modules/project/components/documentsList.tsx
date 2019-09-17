@@ -3,7 +3,6 @@ import {IDocument} from "../../../models/IDocument";
 import {Box, Heading, TextInput} from "grommet";
 import {IProject} from "../../../models/IProject";
 import {DocumentItem} from "./documentItem";
-import {theme} from "../../../theme"
 
 const listStyle: React.CSSProperties = {
     flex: "0 1 350px"

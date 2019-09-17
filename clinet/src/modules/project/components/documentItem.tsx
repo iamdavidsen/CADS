@@ -11,8 +11,6 @@ const textStyle: React.CSSProperties = {
     overflowWrap: "break-word",
     marginBottom: "8px",
     borderBottom: "1px solid black",
-    
-    
 }
 
 interface IProps {
