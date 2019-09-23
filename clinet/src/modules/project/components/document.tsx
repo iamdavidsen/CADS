@@ -34,7 +34,6 @@ export const Document: React.FC<IProps> = ({ document, onEdit, onDelete }) => {
             <Box border={"all"} round={"small"} pad={"medium"} style={boxStyle}>
                 <ReactMarkdown source={document.content}
                     renderers={{ code: CodeBlock }}
-                    escapeHtml
                 />
             </Box>
         </Box>
